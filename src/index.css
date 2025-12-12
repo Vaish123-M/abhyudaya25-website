@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&family=Orbitron:wght@400;700;900&family=Space+Mono:wght@400;700&family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Smooth fade transitions */
+* {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Custom font classes */
+.font-orbitron {
+  font-family: 'Orbitron', monospace;
+  letter-spacing: 0.1em;
+}
+
+.font-bebas {
+  font-family: 'Bebas Neue', cursive;
+  letter-spacing: 0.05em;
+}
+
+.font-space-mono {
+  font-family: 'Space Mono', monospace;
+  letter-spacing: 0.02em;
+}
+
+.font-montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.text-glow {
+  text-shadow: 0 0 20px rgba(252, 211, 77, 0.8), 0 0 40px rgba(217, 119, 6, 0.5);
+}
+
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+/* start hidden */
+.clip-hidden {
+  -webkit-mask-image: radial-gradient(circle at 50% 50%, transparent 0%, transparent 0%);
+  mask-image: radial-gradient(circle at 50% 50%, transparent 0%, transparent 0%);
+}
+
+/* bloom reveal */
+.clip-bloom {
+  -webkit-mask-image: radial-gradient(circle at 50% 50%, white 100%, transparent 0%);
+  mask-image: radial-gradient(circle at 50% 50%, white 100%, transparent 0%);
+  transition: mask-image 2.5s ease-out, -webkit-mask-image 2.5s ease-out;
+}
