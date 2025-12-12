@@ -76,14 +76,14 @@ export default function MainScreen({ onNavigate }) {
       {/* Top Bar - Navigation and Countdown on Same Line */}
       {showUi && (
         <motion.div 
-          className="absolute top-0 left-0 right-0 z-50 bg-gradient-to-b from-black/60 to-transparent px-8 py-6"
+          className="absolute top-0 left-0 right-0 z-50 bg-gradient-to-b from-black/60 to-transparent px-4 sm:px-6 md:px-8 py-4 sm:py-6"
           initial={{ y: -100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 max-w-full">
+        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 max-w-full">
           {/* Navigation Links - Left Side */}
-          <div className="flex flex-wrap gap-5 sm:gap-7 md:gap-10 items-center">
+          <div className="flex flex-wrap gap-3 sm:gap-5 md:gap-7 lg:gap-10 items-center justify-center lg:justify-start">
             {['HOME', 'EVENTS', 'THEME', 'ABOUT US', 'CONTACT'].map((item, index) => (
               <motion.button
                 key={item}
@@ -108,15 +108,15 @@ export default function MainScreen({ onNavigate }) {
 
           {/* Countdown Timer - Right Side */}
           <motion.div 
-            className="flex gap-3 sm:gap-4 md:gap-6 items-center flex-wrap"
+            className="flex gap-2 sm:gap-3 md:gap-4 lg:gap-6 items-center flex-wrap justify-center lg:justify-end"
             initial={{ opacity: 0, x: 100 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.8, duration: 0.6 }}
           >
             <CountdownBox value={timeLeft.days} label="Days" />
-            <div className="text-white text-3xl sm:text-4xl md:text-6xl font-black">:</div>
+            <div className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-black">:</div>
             <CountdownBox value={timeLeft.hours} label="Hours" />
-            <div className="text-white text-3xl sm:text-4xl md:text-6xl font-black">:</div>
+            <div className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-black">:</div>
             <CountdownBox value={timeLeft.minutes} label="Minutes" />
           </motion.div>
         </div>
@@ -126,14 +126,14 @@ export default function MainScreen({ onNavigate }) {
       {/* Register Button - Bottom Right */}
       {showUi && (
         <motion.div 
-          className="absolute bottom-10 right-8 sm:bottom-12 sm:right-12 z-40"
+          className="absolute bottom-6 right-4 sm:bottom-10 sm:right-8 md:bottom-12 md:right-12 z-40"
           initial={{ opacity: 0, scale: 0.8, y: 100 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ delay: 1.2, duration: 0.6, type: "spring" }}
         >
         <motion.button
           onClick={() => alert('Register clicked!')}
-          className="relative px-16 sm:px-18 md:px-20 py-6 sm:py-7 md:py-8 font-black text-2xl sm:text-3xl uppercase tracking-wider overflow-hidden group"
+          className="relative px-8 sm:px-12 md:px-16 lg:px-20 py-4 sm:py-6 md:py-7 lg:py-8 font-black text-lg sm:text-2xl md:text-3xl uppercase tracking-wider overflow-hidden group"
           whileHover={{ scale: 1.08 }}
           whileTap={{ scale: 0.95 }}
         >
@@ -170,7 +170,7 @@ export default function MainScreen({ onNavigate }) {
       {/* Abhyudaya '25 text bottom-left */}
       {showUi && (
         <motion.div
-          className="absolute left-6 bottom-6 z-40"
+          className="absolute left-3 sm:left-6 bottom-24 sm:bottom-6 z-40"
           initial={{ opacity: 0, x: -18, y: 18 }}
           animate={{ opacity: 1, x: 0, y: 0 }}
           transition={{ delay: 0.9, duration: 0.7, ease: "easeOut" }}
@@ -180,7 +180,7 @@ export default function MainScreen({ onNavigate }) {
             style={{
               fontFamily: "Poppins, system-ui, sans-serif",
               letterSpacing: "0.12em",
-              fontSize: "clamp(32px, 5vw, 60px)",
+              fontSize: "clamp(20px, 5vw, 60px)",
               textShadow: "0 4px 18px rgba(0,0,0,0.35), 0 0 24px rgba(219,39,119,0.55)",
               background: "linear-gradient(90deg, #a78bfa, #ec4899)",
               WebkitBackgroundClip: "text",

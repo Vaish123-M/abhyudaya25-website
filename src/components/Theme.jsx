@@ -179,12 +179,12 @@ export default function Theme({ onNavigate }) {
     <div className="w-full min-h-screen relative bg-white">
       {/* Navigation Bar */}
       <motion.div 
-        className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-white/80 border-b border-gray-200 px-8 py-5 shadow-sm"
+        className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-white/80 border-b border-gray-200 px-4 sm:px-6 md:px-8 py-4 sm:py-5 shadow-sm"
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
-        <div className="flex flex-wrap gap-4 sm:gap-6 md:gap-10 items-center justify-center md:justify-start">
+        <div className="flex flex-wrap gap-3 sm:gap-4 md:gap-6 lg:gap-10 items-center justify-center md:justify-start">
           {['HOME', 'EVENTS', 'THEME', 'ABOUT US', 'CONTACT'].map((item, index) => (
             <motion.button
               key={item}
@@ -211,7 +211,7 @@ export default function Theme({ onNavigate }) {
 
       {/* HERO SECTION - Nature Line Art with Color Transition */}
       <motion.section 
-        className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20"
+        className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 px-4 sm:px-6"
         style={{ opacity: heroOpacity }}
       >
         {/* Animated Background Illustration */}
@@ -279,14 +279,14 @@ export default function Theme({ onNavigate }) {
         </div>
 
         {/* Hero Content */}
-        <div className="relative z-10 text-center px-6 max-w-4xl">
+        <div className="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
           >
             <motion.h1 
-              className="text-6xl md:text-8xl font-black mb-6"
+              className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-black mb-4 sm:mb-6 leading-tight"
               style={{
                 fontFamily: 'Playfair Display, serif',
                 background: `linear-gradient(135deg, 
@@ -303,7 +303,7 @@ export default function Theme({ onNavigate }) {
             </motion.h1>
             
             <motion.p
-              className="text-2xl md:text-3xl font-semibold mb-4"
+              className="text-xl sm:text-2xl md:text-3xl font-semibold mb-3 sm:mb-4"
               style={{
                 fontFamily: 'Noto Sans Devanagari, sans-serif',
                 color: `rgba(107, 114, 128, ${0.6 + colorProgress * 0.4})`
@@ -316,7 +316,7 @@ export default function Theme({ onNavigate }) {
             </motion.p>
 
             <motion.p 
-              className="text-xl md:text-2xl text-gray-600 font-medium"
+              className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 font-medium px-4"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 1 }}
@@ -326,7 +326,7 @@ export default function Theme({ onNavigate }) {
 
             {/* Scroll indicator */}
             <motion.div
-              className="mt-16"
+              className="mt-12 sm:mt-16 hidden sm:block"
               animate={{ y: [0, 10, 0] }}
               transition={{ duration: 2, repeat: Infinity }}
             >
@@ -344,12 +344,12 @@ export default function Theme({ onNavigate }) {
       </motion.section>
 
       {/* THEME CARDS SECTION */}
-      <section className="relative py-20 px-6 md:px-12 lg:px-20 bg-gradient-to-b from-white via-gray-50 to-white">
+      <section className="relative py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-12 lg:px-20 bg-gradient-to-b from-white via-gray-50 to-white">
         <div className="max-w-7xl mx-auto">
           {themeCards.map((card, index) => (
             <motion.div
               key={card.id}
-              className={`mb-24 last:mb-0 ${index % 2 === 0 ? '' : 'ml-auto'}`}
+              className="mb-16 sm:mb-20 md:mb-24 last:mb-0"
               initial={{ opacity: 0, y: 60 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
@@ -358,7 +358,7 @@ export default function Theme({ onNavigate }) {
               onMouseLeave={() => setHoveredCard(null)}
             >
               <motion.div
-                className={`relative rounded-3xl bg-gradient-to-br ${card.bgColor} p-8 md:p-12 shadow-xl overflow-hidden border-2 border-${card.accentColor}-200`}
+                className={`relative rounded-2xl sm:rounded-3xl bg-gradient-to-br ${card.bgColor} p-6 sm:p-8 md:p-10 lg:p-12 shadow-xl overflow-hidden border-2 border-${card.accentColor}-200`}
                 whileHover={{ 
                   scale: 1.02,
                   boxShadow: `0 20px 60px ${card.glowColor}`,
@@ -373,10 +373,10 @@ export default function Theme({ onNavigate }) {
                   }}/>
                 </div>
 
-                <div className="relative z-10 grid md:grid-cols-2 gap-8 items-center">
+                <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-center">
                   {/* Illustration Side */}
                   <motion.div 
-                    className="order-2 md:order-1 h-64 md:h-80 flex items-center justify-center"
+                    className="order-2 md:order-1 h-48 sm:h-56 md:h-64 lg:h-80 flex items-center justify-center"
                     animate={hoveredCard === card.id ? { scale: 1.05 } : { scale: 1 }}
                     transition={{ duration: 0.4 }}
                   >
@@ -389,14 +389,14 @@ export default function Theme({ onNavigate }) {
                   <div className="order-1 md:order-2 space-y-4">
                     {/* Icons Row */}
                     <motion.div 
-                      className="flex gap-4 mb-4"
+                      className="flex gap-2 sm:gap-3 md:gap-4 mb-3 sm:mb-4 justify-center md:justify-start"
                       animate={hoveredCard === card.id ? { scale: 1.1 } : { scale: 1 }}
                       transition={{ duration: 0.3 }}
                     >
                       {card.icons.map((icon, i) => (
                         <motion.div
                           key={i}
-                          className={`text-4xl bg-white/60 backdrop-blur-sm rounded-xl p-3 shadow-lg border border-${card.accentColor}-200`}
+                          className={`text-2xl sm:text-3xl md:text-4xl bg-white/60 backdrop-blur-sm rounded-lg sm:rounded-xl p-2 sm:p-3 shadow-lg border border-${card.accentColor}-200`}
                           animate={hoveredCard === card.id ? {
                             y: [0, -10, 0],
                             rotate: [0, 10, -10, 0]
@@ -410,7 +410,7 @@ export default function Theme({ onNavigate }) {
 
                     {/* Hindi Title */}
                     <motion.h2 
-                      className={`text-3xl md:text-4xl font-bold text-${card.accentColor}-900 mb-2`}
+                      className={`text-2xl sm:text-3xl md:text-4xl font-bold text-${card.accentColor}-900 mb-2 text-center md:text-left`}
                       style={{ fontFamily: 'Noto Sans Devanagari, sans-serif' }}
                       animate={hoveredCard === card.id ? { x: [0, 5, 0] } : {}}
                       transition={{ duration: 0.5 }}
@@ -419,18 +419,18 @@ export default function Theme({ onNavigate }) {
                     </motion.h2>
 
                     {/* English Title */}
-                    <h3 className={`text-xl md:text-2xl font-semibold text-${card.accentColor}-700 italic mb-1`}>
+                    <h3 className={`text-lg sm:text-xl md:text-2xl font-semibold text-${card.accentColor}-700 italic mb-1 text-center md:text-left`}>
                       {card.nameEnglish}
                     </h3>
 
                     {/* Subtitle */}
-                    <p className={`text-lg font-bold text-${card.accentColor}-600 uppercase tracking-wide mb-4`}>
+                    <p className={`text-base sm:text-lg font-bold text-${card.accentColor}-600 uppercase tracking-wide mb-3 sm:mb-4 text-center md:text-left`}>
                       {card.subtitle}
                     </p>
 
                     {/* Description */}
                     <motion.p 
-                      className={`text-base md:text-lg text-${card.accentColor}-800 leading-relaxed`}
+                      className={`text-sm sm:text-base md:text-lg text-${card.accentColor}-800 leading-relaxed text-center md:text-left`}
                       animate={hoveredCard === card.id ? { opacity: 1 } : { opacity: 0.9 }}
                     >
                       {card.description}
@@ -438,7 +438,7 @@ export default function Theme({ onNavigate }) {
 
                     {/* Decorative Line */}
                     <motion.div 
-                      className={`h-1 bg-gradient-to-r from-${card.accentColor}-400 to-${card.accentColor}-600 rounded-full mt-6`}
+                      className={`h-1 bg-gradient-to-r from-${card.accentColor}-400 to-${card.accentColor}-600 rounded-full mt-4 sm:mt-6 mx-auto md:mx-0`}
                       initial={{ width: "0%" }}
                       whileInView={{ width: hoveredCard === card.id ? "100%" : "60%" }}
                       viewport={{ once: true }}
@@ -448,10 +448,10 @@ export default function Theme({ onNavigate }) {
                 </div>
 
                 {/* Decorative Corner Elements */}
-                <div className={`absolute top-4 left-4 w-8 h-8 border-t-4 border-l-4 border-${card.accentColor}-400 rounded-tl-lg opacity-50`}/>
-                <div className={`absolute top-4 right-4 w-8 h-8 border-t-4 border-r-4 border-${card.accentColor}-400 rounded-tr-lg opacity-50`}/>
-                <div className={`absolute bottom-4 left-4 w-8 h-8 border-b-4 border-l-4 border-${card.accentColor}-400 rounded-bl-lg opacity-50`}/>
-                <div className={`absolute bottom-4 right-4 w-8 h-8 border-b-4 border-r-4 border-${card.accentColor}-400 rounded-br-lg opacity-50`}/>
+                <div className={`absolute top-2 sm:top-4 left-2 sm:left-4 w-6 sm:w-8 h-6 sm:h-8 border-t-2 sm:border-t-4 border-l-2 sm:border-l-4 border-${card.accentColor}-400 rounded-tl-lg opacity-50`}/>
+                <div className={`absolute top-2 sm:top-4 right-2 sm:right-4 w-6 sm:w-8 h-6 sm:h-8 border-t-2 sm:border-t-4 border-r-2 sm:border-r-4 border-${card.accentColor}-400 rounded-tr-lg opacity-50`}/>
+                <div className={`absolute bottom-2 sm:bottom-4 left-2 sm:left-4 w-6 sm:w-8 h-6 sm:h-8 border-b-2 sm:border-b-4 border-l-2 sm:border-l-4 border-${card.accentColor}-400 rounded-bl-lg opacity-50`}/>
+                <div className={`absolute bottom-2 sm:bottom-4 right-2 sm:right-4 w-6 sm:w-8 h-6 sm:h-8 border-b-2 sm:border-b-4 border-r-2 sm:border-r-4 border-${card.accentColor}-400 rounded-br-lg opacity-50`}/>
 
                 {/* Shine Effect on Hover */}
                 {hoveredCard === card.id && (
@@ -470,15 +470,15 @@ export default function Theme({ onNavigate }) {
 
       {/* Footer Section */}
       <motion.section 
-        className="relative py-16 bg-gradient-to-b from-gray-50 to-gray-100"
+        className="relative py-12 sm:py-16 bg-gradient-to-b from-gray-50 to-gray-100"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 1 }}
       >
-        <div className="max-w-4xl mx-auto text-center px-6">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6">
           <motion.h3 
-            className="text-3xl md:text-4xl font-bold text-gray-800 mb-4"
+            className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-3 sm:mb-4"
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
@@ -487,7 +487,7 @@ export default function Theme({ onNavigate }) {
             Together, We Transform
           </motion.h3>
           <motion.p 
-            className="text-lg text-gray-600 mb-8"
+            className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8 px-4"
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
@@ -503,7 +503,7 @@ export default function Theme({ onNavigate }) {
           >
             <button
               onClick={() => onNavigate('events')}
-              className="px-8 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 text-lg"
+              className="px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 text-base sm:text-lg"
             >
               Explore Our Events
             </button>

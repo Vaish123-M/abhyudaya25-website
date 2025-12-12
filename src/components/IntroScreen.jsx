@@ -62,7 +62,7 @@ export default function IntroScreen({ onEnter }) {
       {/* Enter Button */}
       <motion.button
         onClick={handleEnterClick}
-        className="px-10 py-4 bg-black/80 text-white rounded-full text-xl font-semibold shadow-2xl border border-white/20 relative z-20"
+        className="px-6 sm:px-10 py-3 sm:py-4 bg-black/80 text-white rounded-full text-base sm:text-xl font-semibold shadow-2xl border border-white/20 relative z-20"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: startColoring ? 0 : 1, y: startColoring ? -10 : 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}

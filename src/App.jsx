@@ -2,6 +2,7 @@ import { useState } from "react";
 import IntroScreen from "./components/IntroScreen";
 import MainScreen from "./components/MainScreen";
 import EventsPage from "./components/EventsPage";
+import EventDetails from "./components/EventDetails";
 import Theme from "./components/Theme";
 import AboutUs from "./components/AboutUs";
 import Contact from "./components/Contact";
@@ -27,6 +28,11 @@ export default function App() {
 
   if (currentPage === "contact") {
     return <Contact onNavigate={setCurrentPage} />;
+  }
+
+  // Event details routes: currentPage values starting with 'event-'
+  if (currentPage.startsWith("event-")) {
+    return <EventDetails route={currentPage} onNavigate={setCurrentPage} />;
   }
 
   return <MainScreen onNavigate={setCurrentPage} />;

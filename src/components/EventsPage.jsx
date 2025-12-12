@@ -1,14 +1,35 @@
-import { motion } from "framer-motion";
-import { useState } from "react";
+import { motion, useMotionValue, useTransform } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 
 export default function EventsPage({ onNavigate }) {
   const [hoveredCard, setHoveredCard] = useState(null);
+  const [flippedCard, setFlippedCard] = useState(null);
+  const parallaxRef = useRef(null);
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+  const bgTranslateX = useTransform(mouseX, [0, 1], [-10, 10]);
+  const bgTranslateY = useTransform(mouseY, [0, 1], [-8, 8]);
+
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      if (!parallaxRef.current) return;
+      const rect = parallaxRef.current.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width;
+      const y = (e.clientY - rect.top) / rect.height;
+      mouseX.set(x);
+      mouseY.set(y);
+    };
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, [mouseX, mouseY]);
 
   const events = [
     {
       id: 1,
       title: "Ultimate Socio Technocrat",
       description: "A unique blend of social awareness and technical expertise competition",
+      detailText: "Compete as a socially conscious technocrat—solve civic-tech problems with impact-first thinking.",
+      route: "event-ultimate-socio-technocrat",
       icon: "⚙️",
       category: "tech"
     },
@@ -16,6 +37,8 @@ export default function EventsPage({ onNavigate }) {
       id: 2,
       title: "Pragyan Lecture Series - Lecture 1",
       description: "First lecture in the enlightening Pragyan Lecture Series",
+      detailText: "An inspiring talk by eminent speaker—perspectives, insights, and Q&A.",
+      route: "event-pragyan-lecture-1",
       icon: "🎤",
       category: "intellectual"
     },
@@ -23,6 +46,8 @@ export default function EventsPage({ onNavigate }) {
       id: 3,
       title: "Pragyan Lecture Series - Lecture 2",
       description: "Second lecture in the enlightening Pragyan Lecture Series",
+      detailText: "Deep-dive session to broaden your understanding and curiosity.",
+      route: "event-pragyan-lecture-2",
       icon: "🎤",
       category: "intellectual"
     },
@@ -30,6 +55,8 @@ export default function EventsPage({ onNavigate }) {
       id: 4,
       title: "Pragyan Panel Discussion",
       description: "Insightful panel discussion bringing diverse perspectives",
+      detailText: "Experts debate contemporary topics—hear multiple sides and ask questions.",
+      route: "event-pragyan-panel",
       icon: "💬",
       category: "intellectual"
     },
@@ -37,6 +64,8 @@ export default function EventsPage({ onNavigate }) {
       id: 5,
       title: "Speech Competition",
       description: "Express yourself and showcase your oratory skills",
+      detailText: "Craft compelling arguments and deliver memorable speeches.",
+      route: "event-speech",
       icon: "🎙️",
       category: "energetic"
     },
@@ -44,6 +73,8 @@ export default function EventsPage({ onNavigate }) {
       id: 6,
       title: "Reel Making Competition",
       description: "Create stunning short videos and viral content",
+      detailText: "Make creative reels—story, edit, and wow the audience.",
+      route: "event-reel-making",
       icon: "🎬",
       category: "creative"
     },
@@ -51,6 +82,8 @@ export default function EventsPage({ onNavigate }) {
       id: 7,
       title: "Drawing Competition",
       description: "Express your creativity through art and illustrations",
+      detailText: "Showcase your art skills—theme-based drawing challenge.",
+      route: "event-drawing",
       icon: "🎨",
       category: "creative"
     },
@@ -58,6 +91,8 @@ export default function EventsPage({ onNavigate }) {
       id: 8,
       title: "Treasure Hunt",
       description: "An adventurous quest full of surprises and challenges",
+      detailText: "Solve clues, race through campus, and find the treasure!",
+      route: "event-treasure-hunt",
       icon: "🗺️",
       category: "energetic"
     },
@@ -65,6 +100,8 @@ export default function EventsPage({ onNavigate }) {
       id: 9,
       title: "Hackathon",
       description: "Build innovative solutions in a time-bound challenge",
+      detailText: "A 24-hour sprint to prototype and pitch your idea.",
+      route: "event-hackathon",
       icon: "💻",
       category: "tech"
     },
@@ -72,6 +109,8 @@ export default function EventsPage({ onNavigate }) {
       id: 10,
       title: "Project Competition",
       description: "Showcase your projects and compete with the best",
+      detailText: "Demo your project to judges and the crowd.",
+      route: "event-project",
       icon: "🚀",
       category: "tech"
     },
@@ -79,6 +118,8 @@ export default function EventsPage({ onNavigate }) {
       id: 11,
       title: "Youth Parliament",
       description: "Debate and discuss contemporary issues",
+      detailText: "Simulate the parliament—debate policies and propose reforms.",
+      route: "event-yuva-sansad",
       icon: "🏛️",
       category: "intellectual"
     },
@@ -86,6 +127,8 @@ export default function EventsPage({ onNavigate }) {
       id: 12,
       title: "Open Stage",
       description: "Platform for all forms of talent and performances",
+      detailText: "Perform anything—music, dance, poetry, stand-up, and more.",
+      route: "event-open-stage",
       icon: "🎭",
       category: "filler"
     }
@@ -132,32 +175,50 @@ export default function EventsPage({ onNavigate }) {
   };
 
   return (
-    <div className="w-full min-h-screen relative pt-32 pb-16 px-6 overflow-hidden"
+    <div ref={parallaxRef} className="w-full min-h-screen relative pt-32 pb-16 px-6 overflow-hidden"
       style={{ background: "linear-gradient(135deg, #4338CA, #7C3AED 45%, #DB2777)" }}
     >
       {/* Animated Background Gradient */}
-      <div className="absolute inset-0 -z-10">
+      <motion.div className="absolute inset-0 -z-10" style={{ translateX: bgTranslateX, translateY: bgTranslateY }}>
         <div className="absolute top-20 left-1/3 w-80 h-80 bg-amber-500/20 rounded-full blur-3xl animate-pulse" />
         <div className="absolute top-1/2 right-1/4 w-96 h-96 bg-cyan-400/15 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1s" }} />
         <div className="absolute bottom-0 left-1/4 w-72 h-72 bg-amber-600/15 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "2s" }} />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-900/50" />
-      </div>
+      </motion.div>
+
+      {/* Floating Particle Field */}
+      {[...Array(20)].map((_, i) => (
+        <motion.span
+          key={i}
+          className="absolute -z-10 w-1.5 h-1.5 rounded-full"
+          style={{
+            left: `${(i * 37) % 100}%`,
+            top: `${(i * 53) % 100}%`,
+            background: i % 3 === 0 ? '#22d3ee' : i % 3 === 1 ? '#f59e0b' : '#a78bfa',
+            opacity: 0.5,
+            filter: 'blur(0.5px)'
+          }}
+          animate={{ y: [0, -12, 0], x: [0, 6, 0], opacity: [0.3, 0.6, 0.3] }}
+          transition={{ duration: 3 + (i % 5), repeat: Infinity, delay: i * 0.1 }}
+        />
+      ))}
 
       {/* Page Header */}
       <motion.div 
-        className="text-center mb-10 sm:mb-12 md:mb-16 relative z-10 px-4"
+        className="text-center mb-10 sm:mb-12 md:mb-16 relative z-10 px-2 sm:px-4"
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        <h1 className="mb-4 uppercase tracking-widest drop-shadow-2xl"
+        <h1 className="mb-4 uppercase tracking-wide sm:tracking-widest drop-shadow-2xl overflow-hidden"
           style={{
             fontFamily: 'Playfair Display, serif',
             fontWeight: 900,
-            fontSize: 'clamp(32px, 6vw, 72px)',
+            fontSize: 'clamp(24px, 5vw, 72px)',
             color: '#ffffff',
-            letterSpacing: '0.15em',
-            textShadow: '0 0 30px rgba(255,255,255,0.85), 0 0 60px rgba(255,255,255,0.55)'
+            letterSpacing: 'clamp(0.02em, 0.8vw, 0.15em)',
+            textShadow: '0 0 30px rgba(255,255,255,0.85), 0 0 60px rgba(255,255,255,0.55)',
+            wordSpacing: '0.2em'
           }}
         >
           {"ABHYUDAYA EVENTS".split("").map((letter, idx) => (
@@ -255,6 +316,7 @@ export default function EventsPage({ onNavigate }) {
               whileHover={{ y: -12, scale: 1.03 }}
               transition={{ type: "spring", stiffness: 260, damping: 18 }}
               style={{ minHeight: "320px" }}
+              onClick={() => setFlippedCard(flippedCard === event.id ? null : event.id)}
             >
               {/* Glowing Background Light */}
               <motion.div
@@ -315,7 +377,7 @@ export default function EventsPage({ onNavigate }) {
                 {/* Icon */}
                 <motion.div 
                   className="text-5xl sm:text-6xl mb-3 sm:mb-4 flex justify-center"
-                  animate={hoveredCard === event.id ? { scale: 1.25, rotate: 8, filter: "drop-shadow(0 0 20px rgba(255, 255, 255, 0.7))" } : { scale: 1, rotate: 0, filter: "drop-shadow(0 0 10px rgba(255, 255, 255, 0.4))" }}
+                  animate={hoveredCard === event.id ? { scale: 1.25, rotate: [0, 8, -8, 0], filter: "drop-shadow(0 0 20px rgba(255, 255, 255, 0.7))" } : { scale: 1, rotate: 0, filter: "drop-shadow(0 0 10px rgba(255, 255, 255, 0.4))" }}
                   transition={{ duration: 0.35, ease: "easeOut" }}
                 >
                   {event.icon}
@@ -352,6 +414,14 @@ export default function EventsPage({ onNavigate }) {
                   transition={{ duration: 0.25, ease: "easeOut" }}
                 >
                   Learn More
+                  {/* Ripple */}
+                  <span className="absolute inset-0 overflow-hidden rounded-lg">
+                    <motion.span
+                      className="absolute left-1/2 top-1/2 w-0 h-0 rounded-full"
+                      style={{ background: gradients[event.category].glow.replace('0.7', '0.3') }}
+                      whileHover={{ width: 300, height: 300, x: '-50%', y: '-50%', opacity: 0.3 }}
+                    />
+                  </span>
                 </motion.button>
               </div>
 
@@ -367,6 +437,36 @@ export default function EventsPage({ onNavigate }) {
                 }}
                 transition={{ duration: 0.3 }}
               />
+
+              {/* Backside overlay (flip effect) */}
+              {flippedCard === event.id && (
+                <motion.div
+                  className="absolute inset-0 rounded-2xl bg-black/80 backdrop-blur-sm flex flex-col items-center justify-between p-6 z-30"
+                  initial={{ rotateY: 90, opacity: 0 }}
+                  animate={{ rotateY: 0, opacity: 1 }}
+                  exit={{ rotateY: -90, opacity: 0 }}
+                  transition={{ duration: 0.35, ease: 'easeOut' }}
+                  style={{ transformOrigin: 'center' }}
+                  onClick={() => setFlippedCard(null)}
+                >
+                  <div className="text-center">
+                    <h4 className="text-white font-black text-lg sm:text-xl md:text-2xl mb-3 uppercase tracking-wide">
+                      {event.title}
+                    </h4>
+                    <p className="text-white/90 text-sm md:text-base leading-relaxed max-w-md">
+                      {event.detailText || event.description}
+                    </p>
+                  </div>
+                  <motion.button
+                    className="mt-4 px-5 py-3 bg-white text-black font-bold rounded-lg uppercase text-xs sm:text-sm tracking-wider shadow-xl"
+                    whileHover={{ scale: 1.06, y: -2 }}
+                    whileTap={{ scale: 0.95 }}
+                    onClick={(e) => { e.stopPropagation(); onNavigate(event.route || 'events'); }}
+                  >
+                    Explore
+                  </motion.button>
+                </motion.div>
+              )}
             </motion.div>
           </motion.div>
         ))}

@@ -48,13 +48,13 @@ export default function Contact({ onNavigate = () => {} }) {
         </motion.div>
         {/* Navigation Bar */}
         <motion.div 
-          className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-b from-black/70 to-transparent px-8 py-6"
+          className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-b from-black/70 to-transparent px-4 sm:px-6 md:px-8 py-4 sm:py-6"
           initial={{ y: -100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
           <div className="flex items-center justify-between max-w-full">
-            <div className="flex flex-wrap gap-4 sm:gap-6 md:gap-10 items-center">
+            <div className="flex flex-wrap gap-3 sm:gap-4 md:gap-6 lg:gap-10 items-center justify-center w-full md:w-auto">
               {['HOME', 'EVENTS', 'THEME', 'ABOUT US', 'CONTACT'].map((item, index) => (
                 <motion.button
                   key={item}
