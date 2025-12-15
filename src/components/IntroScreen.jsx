@@ -26,8 +26,9 @@ export default function IntroScreen({ onEnter }) {
       style={{
         backgroundColor: "#0b1021",
         backgroundImage: `url(${sketchImg})`,
-        backgroundSize: "cover",
+        backgroundSize: "100% 100%",
         backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
         transition: "background 900ms ease"
       }}
     >

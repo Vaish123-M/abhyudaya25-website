@@ -67,7 +67,7 @@ export default function MainScreen({ onNavigate }) {
       {/* Colored hero image fades in after intro */}
       <motion.div
         className="absolute inset-0"
-        style={{ backgroundImage: `url(${coloredImg})`, backgroundSize: "cover", backgroundPosition: "center" }}
+        style={{ backgroundImage: `url(${coloredImg})`, backgroundSize: "100% 100%", backgroundPosition: "center", backgroundRepeat: "no-repeat" }}
         initial={{ opacity: 0, scale: 1.03 }}
         animate={{ opacity: reveal ? 1 : 0, scale: reveal ? 1 : 1.03 }}
         transition={{ duration: 1.5, ease: "easeOut" }}
@@ -76,7 +76,7 @@ export default function MainScreen({ onNavigate }) {
       {/* Top Bar - Navigation and Countdown on Same Line */}
       {showUi && (
         <motion.div 
-          className="absolute top-0 left-0 right-0 z-50 bg-gradient-to-b from-black/60 to-transparent px-4 sm:px-6 md:px-8 py-4 sm:py-6"
+          className="absolute top-0 left-0 right-0 z-50 bg-gradient-to-b from-black/90 via-black/70 to-transparent px-4 sm:px-6 md:px-8 pt-8 pb-6 sm:pt-10 sm:pb-8"
           initial={{ y: -100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
