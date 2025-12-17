@@ -51,12 +51,12 @@ export default function MainScreen({ onNavigate }) {
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="bg-white/20 backdrop-blur-md rounded-lg px-6 py-4 sm:px-7 sm:py-5 md:px-8 md:py-5 min-w-[88px] sm:min-w-[100px] md:min-w-[110px] border-2 border-white">
-        <div className="text-4xl sm:text-5xl md:text-7xl font-black text-white font-mono">
+      <div className="bg-white/20 backdrop-blur-md rounded-lg px-5 py-3 sm:px-6 sm:py-4 md:px-7 md:py-4 min-w-[76px] sm:min-w-[90px] md:min-w-[100px] border-2 border-white">
+        <div className="text-3xl sm:text-4xl md:text-6xl font-black text-white font-mono">
           {String(value).padStart(2, '0')}
         </div>
       </div>
-      <div className="text-white text-sm sm:text-base md:text-lg font-semibold mt-3 uppercase tracking-widest">
+      <div className="text-white text-xs sm:text-sm md:text-base font-semibold mt-3 uppercase tracking-widest">
         {label}
       </div>
     </motion.div>
@@ -76,12 +76,12 @@ export default function MainScreen({ onNavigate }) {
       {/* Top Bar - Navigation and Countdown on Same Line */}
       {showUi && (
         <motion.div 
-          className="absolute top-0 left-0 right-0 z-50 bg-gradient-to-b from-black/90 via-black/70 to-transparent px-4 sm:px-6 md:px-8 pt-8 pb-6 sm:pt-10 sm:pb-8"
+          className="absolute top-0 left-0 right-0 z-50 bg-gradient-to-b from-black/90 via-black/70 to-transparent px-4 sm:px-6 md:px-8 pt-4 pb-3 sm:pt-5 sm:pb-4"
           initial={{ y: -100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 max-w-full">
+        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 max-w-full mt-12 sm:mt-14 md:mt-16">
           {/* Navigation Links - Left Side */}
           <div className="flex flex-wrap gap-3 sm:gap-5 md:gap-7 lg:gap-10 items-center justify-center lg:justify-start">
             {['HOME', 'EVENTS', 'THEME', 'ABOUT US', 'CONTACT'].map((item, index) => (
@@ -114,9 +114,9 @@ export default function MainScreen({ onNavigate }) {
             transition={{ delay: 0.8, duration: 0.6 }}
           >
             <CountdownBox value={timeLeft.days} label="Days" />
-            <div className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-black">:</div>
+            <div className="text-white text-xl sm:text-2xl md:text-3xl lg:text-5xl font-black">:</div>
             <CountdownBox value={timeLeft.hours} label="Hours" />
-            <div className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-black">:</div>
+            <div className="text-white text-xl sm:text-2xl md:text-3xl lg:text-5xl font-black">:</div>
             <CountdownBox value={timeLeft.minutes} label="Minutes" />
           </motion.div>
         </div>
