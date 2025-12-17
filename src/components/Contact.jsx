@@ -123,7 +123,7 @@ export default function Contact({ onNavigate = () => {} }) {
           </div>
         </motion.div>
 
-        <div className="max-w-5xl mx-auto relative z-10 pt-32 sm:pt-36 md:pt-40 px-4 sm:px-6 md:px-8">
+        <div className="max-w-5xl mx-auto relative z-10 sm:pt-4 md:pt-8 px-4 sm:px-6 md:px-8">
           {/* Header with animated letters */}
           <div className="text-center mb-12 md:mb-16">
             <motion.h2
