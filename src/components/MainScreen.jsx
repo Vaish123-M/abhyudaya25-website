@@ -63,7 +63,7 @@ export default function MainScreen({ onNavigate }) {
   );
 
   return (
-    <div className="w-full h-screen relative overflow-hidden" style={{ background: "radial-gradient(circle at 30% 30%, rgba(99,102,241,0.25), transparent 35%), radial-gradient(circle at 80% 50%, rgba(219,39,119,0.25), transparent 32%), #0b0d1a" }}>
+    <div className="w-full h-screen relative overflow-hidden" style={{ background: "radial-gradient(circle at 30% 30%, rgba(251,191,36,0.15), transparent 40%), radial-gradient(circle at 80% 50%, rgba(251,146,60,0.15), transparent 35%), linear-gradient(135deg, #f5ebe0, #f4e8db, #eddcc8)" }}>
       {/* Colored hero image fades in after intro */}
       <motion.div
         className="absolute inset-0"
@@ -94,7 +94,7 @@ export default function MainScreen({ onNavigate }) {
                   if (item === 'ABOUT US') onNavigate('about');
                   if (item === 'CONTACT') onNavigate('contact');
                 }}
-                className="text-white font-black hover:text-[#FFB6C1] transition-colors duration-300 text-base sm:text-lg md:text-2xl uppercase tracking-wider cursor-pointer"
+                className="text-white font-black hover:text-[#fbbf24] transition-colors duration-300 text-base sm:text-lg md:text-2xl uppercase tracking-wider cursor-pointer"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 + index * 0.1, duration: 0.5 }}
@@ -181,8 +181,8 @@ export default function MainScreen({ onNavigate }) {
               fontFamily: "Poppins, system-ui, sans-serif",
               letterSpacing: "0.12em",
               fontSize: "clamp(20px, 5vw, 60px)",
-              textShadow: "0 4px 18px rgba(0,0,0,0.35), 0 0 24px rgba(219,39,119,0.55)",
-              background: "linear-gradient(90deg, #a78bfa, #ec4899)",
+              textShadow: "0 4px 18px rgba(0,0,0,0.25), 0 0 24px rgba(217,119,6,0.45)",
+              background: "linear-gradient(90deg, #d97706, #f59e0b, #ea580c)",
               WebkitBackgroundClip: "text",
               color: "transparent",
               display: "inline-block"
