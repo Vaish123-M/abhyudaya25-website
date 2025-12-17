@@ -176,42 +176,81 @@ export default function Theme({ onNavigate }) {
   };
 
   return (
-    <div className="w-full min-h-screen relative bg-white">
-      {/* Navigation Bar */}
-      <motion.div 
-        className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-white/80 border-b border-gray-200 px-4 sm:px-6 md:px-8 py-4 sm:py-5 shadow-sm"
+    <div
+      className="w-full min-h-screen relative overflow-hidden"
+      style={{
+        background:
+          "radial-gradient(circle at 28% 32%, rgba(249,115,22,0.12), transparent 42%), radial-gradient(circle at 78% 50%, rgba(34,197,94,0.12), transparent 38%), linear-gradient(135deg, #f7f1e8, #f4ecdf, #efe2cf)",
+      }}
+    >
+      {/* Animated Background Gradient and Orbs */}
+      <motion.div className="absolute inset-0 -z-10">
+        <div className="absolute top-20 left-1/3 w-80 h-80 bg-orange-400/14 rounded-full blur-3xl animate-pulse" />
+        <div
+          className="absolute top-1/2 right-1/4 w-96 h-96 bg-emerald-400/14 rounded-full blur-3xl animate-pulse"
+          style={{ animationDelay: "1s" }}
+        />
+        <div
+          className="absolute bottom-0 left-1/4 w-72 h-72 bg-sky-500/14 rounded-full blur-3xl animate-pulse"
+          style={{ animationDelay: "2s" }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-orange-900/15 via-transparent to-sky-900/10" />
+      </motion.div>
+
+      {/* Top Navigation Bar - Match site */}
+      <motion.div
+        className="absolute top-0 left-0 right-0 z-50 bg-gradient-to-b from-black/90 via-black/70 to-transparent px-4 sm:px-6 md:px-8 pt-4 pb-3 sm:pt-5 sm:pb-4"
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
-        <div className="flex flex-wrap gap-3 sm:gap-4 md:gap-6 lg:gap-10 items-center justify-center md:justify-start">
-          {['HOME', 'EVENTS', 'THEME', 'ABOUT US', 'CONTACT'].map((item, index) => (
-            <motion.button
-              key={item}
-              onClick={() => {
-                if (item === 'HOME') onNavigate('home');
-                if (item === 'EVENTS') onNavigate('events');
-                if (item === 'THEME') onNavigate('theme');
-                if (item === 'ABOUT US') onNavigate('about');
-                if (item === 'CONTACT') onNavigate('contact');
-              }}
-              className="text-gray-800 font-bold transition-all duration-300 text-base sm:text-lg md:text-xl uppercase tracking-wide cursor-pointer hover:text-orange-500 relative group"
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 + index * 0.1, duration: 0.5 }}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              {item}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
-            </motion.button>
-          ))}
+        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 max-w-full mt-12 sm:mt-14 md:mt-16">
+          <div className="flex flex-wrap gap-3 sm:gap-5 md:gap-7 lg:gap-10 items-center justify-center lg:justify-start">
+            {['HOME', 'EVENTS', 'THEME', 'ABOUT US', 'CONTACT'].map((item, index) => (
+              <motion.button
+                key={item}
+                onClick={() => {
+                  if (item === 'HOME') onNavigate('home');
+                  if (item === 'EVENTS') onNavigate('events');
+                  if (item === 'THEME') onNavigate('theme');
+                  if (item === 'ABOUT US') onNavigate('about');
+                  if (item === 'CONTACT') onNavigate('contact');
+                }}
+                className="text-white font-black hover:text-[#f97316] transition-colors duration-300 text-base sm:text-lg md:text-2xl uppercase tracking-wider cursor-pointer"
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3 + index * 0.1, duration: 0.5 }}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                {item}
+              </motion.button>
+            ))}
+          </div>
         </div>
       </motion.div>
 
+      {/* Floating Particle Field */}
+      {[...Array(24)].map((_, i) => (
+        <motion.span
+          key={i}
+          className="absolute -z-10 w-2 h-2 rounded-full"
+          style={{
+            left: `${(i * 37) % 100}%`,
+            top: `${(i * 53) % 100}%`,
+            background: i % 3 === 0 ? '#f97316' : i % 3 === 1 ? '#22c55e' : '#2563eb',
+            opacity: 0.6,
+            filter: 'blur(1px)',
+            boxShadow: '0 0 10px currentColor',
+          }}
+          animate={{ y: [0, -20, 0], x: [0, 10, 0], opacity: [0.4, 0.8, 0.4] }}
+          transition={{ duration: 4 + (i % 6), repeat: Infinity, delay: i * 0.1 }}
+        />
+      ))}
+
       {/* HERO SECTION - Nature Line Art with Color Transition */}
-      <motion.section 
-        className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 px-4 sm:px-6"
+      <motion.section
+        className="relative min-h-screen flex items-center justify-center overflow-hidden pt-36 sm:pt-40 md:pt-44 px-4 sm:px-6"
         style={{ opacity: heroOpacity }}
       >
         {/* Animated Background Illustration */}
@@ -285,21 +324,33 @@ export default function Theme({ onNavigate }) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
           >
-            <motion.h1 
-              className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-black mb-4 sm:mb-6 leading-tight"
+            <motion.h1
+              className="mb-6 uppercase tracking-widest drop-shadow-2xl overflow-hidden whitespace-nowrap mx-auto -ml-6 sm:-ml-12 md:-ml-16 lg:-ml-20"
               style={{
-                fontFamily: 'Playfair Display, serif',
-                background: `linear-gradient(135deg, 
-                  rgba(249, 115, 22, ${0.5 + colorProgress * 0.5}) 0%, 
-                  rgba(59, 130, 246, ${0.5 + colorProgress * 0.5}) 50%, 
-                  rgba(34, 197, 94, ${0.5 + colorProgress * 0.5}) 100%)`,
+                fontFamily: 'Poppins, system-ui, sans-serif',
+                fontWeight: 900,
+                fontSize: 'clamp(20px, 5.8vw, 84px)',
+                letterSpacing: '0.08em',
+                textShadow:
+                  '0 4px 18px rgba(0,0,0,0.25), 0 0 30px rgba(249,115,22,0.45), 0 0 50px rgba(37,99,235,0.3)',
+                background: 'linear-gradient(90deg, #f97316, #22c55e, #2563eb)',
                 WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: colorProgress > 0.3 ? 'transparent' : '#1f2937',
-                backgroundClip: 'text',
-                textShadow: colorProgress > 0.5 ? '0 4px 20px rgba(0,0,0,0.1)' : 'none'
+                color: 'transparent',
+                display: 'inline-block',
+                whiteSpace: 'nowrap',
               }}
             >
-              PANCH PARIVARTAN 2025
+              {"PANCH PARIVARTAN".split("").map((letter, idx) => (
+                <motion.span
+                  key={idx}
+                  initial={{ opacity: 0, y: -20, rotateX: -90 }}
+                  animate={{ opacity: 1, y: 0, rotateX: 0 }}
+                  transition={{ duration: 0.5, delay: idx * 0.05, ease: 'easeOut' }}
+                  style={{ display: 'inline-block', marginRight: letter === ' ' ? '0.3em' : '0' }}
+                >
+                  {letter === ' ' ? "\u00A0" : letter}
+                </motion.span>
+              ))}
             </motion.h1>
             
             <motion.p
@@ -316,12 +367,23 @@ export default function Theme({ onNavigate }) {
             </motion.p>
 
             <motion.p 
-              className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 font-medium px-4"
+              className="text-base sm:text-lg md:text-xl lg:text-2xl font-poppins font-bold drop-shadow-lg uppercase tracking-widest"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 1 }}
+              style={{ textShadow: '0 0 25px rgba(37, 99, 235, 0.35)' }}
             >
-              Themes that Inspire a Better Tomorrow
+              {"Themes that Inspire a Better Tomorrow".split(" ").map((word, idx) => (
+                <motion.span
+                  key={idx}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: [20, -3, 0], color: ['#f97316', '#22c55e', '#2563eb', '#22c55e'] }}
+                  transition={{ duration: 0.6, delay: 0.9 + idx * 0.08, ease: 'easeOut' }}
+                  style={{ display: 'inline-block', marginRight: '0.35em' }}
+                >
+                  {word}
+                </motion.span>
+              ))}
             </motion.p>
 
             {/* Scroll indicator */}
@@ -344,7 +406,7 @@ export default function Theme({ onNavigate }) {
       </motion.section>
 
       {/* THEME CARDS SECTION */}
-      <section className="relative py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-12 lg:px-20 bg-gradient-to-b from-white via-gray-50 to-white">
+      <section className="relative py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-12 lg:px-20">
         <div className="max-w-7xl mx-auto">
           {themeCards.map((card, index) => (
             <motion.div
@@ -470,7 +532,7 @@ export default function Theme({ onNavigate }) {
 
       {/* Footer Section */}
       <motion.section 
-        className="relative py-12 sm:py-16 bg-gradient-to-b from-gray-50 to-gray-100"
+        className="relative py-12 sm:py-16"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
@@ -478,7 +540,7 @@ export default function Theme({ onNavigate }) {
       >
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6">
           <motion.h3 
-            className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-3 sm:mb-4"
+            className="text-2xl sm:text-3xl md:text-4xl font-black text-orange-600 mb-3 sm:mb-4 font-poppins drop-shadow-lg uppercase tracking-widest"
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
@@ -487,7 +549,7 @@ export default function Theme({ onNavigate }) {
             Together, We Transform
           </motion.h3>
           <motion.p 
-            className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8 px-4"
+            className="text-base sm:text-lg text-slate-800 mb-6 sm:mb-8 px-4 font-poppins"
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
