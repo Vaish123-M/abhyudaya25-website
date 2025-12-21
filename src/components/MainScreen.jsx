@@ -81,7 +81,7 @@ export default function MainScreen({ onNavigate }) {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 max-w-full mt-12 sm:mt-14 md:mt-16">
+        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 max-w-full mt-2 sm:mt-3 md:mt-4">
           {/* Navigation Links - Left Side */}
           <div className="flex flex-wrap gap-3 sm:gap-5 md:gap-7 lg:gap-10 items-center justify-center lg:justify-start">
             {['HOME', 'EVENTS', 'THEME', 'ABOUT US', 'CONTACT'].map((item, index) => (
