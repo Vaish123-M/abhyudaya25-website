@@ -51,8 +51,8 @@ export default function MainScreen({ onNavigate }) {
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="bg-white/20 backdrop-blur-md rounded-lg px-5 py-3 sm:px-6 sm:py-4 md:px-7 md:py-4 min-w-[76px] sm:min-w-[90px] md:min-w-[100px] border-2 border-white">
-        <div className="text-3xl sm:text-4xl md:text-6xl font-black text-white font-mono">
+      <div className="bg-white/20 backdrop-blur-md rounded-lg px-3 py-2 sm:px-6 sm:py-4 md:px-7 md:py-4 min-w-[60px] sm:min-w-[90px] md:min-w-[100px] border-2 border-white">
+        <div className="text-2xl sm:text-4xl md:text-6xl font-black text-white font-mono">
           {String(value).padStart(2, '0')}
         </div>
       </div>
@@ -83,7 +83,7 @@ export default function MainScreen({ onNavigate }) {
         >
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 max-w-full mt-2 sm:mt-3 md:mt-4">
           {/* Navigation Links - Left Side */}
-          <div className="flex flex-wrap gap-3 sm:gap-5 md:gap-7 lg:gap-10 items-center justify-center lg:justify-start">
+          <div className="flex flex-wrap gap-2 sm:gap-5 md:gap-7 lg:gap-10 items-center justify-center lg:justify-start">
             {['HOME', 'EVENTS', 'THEME', 'ABOUT US', 'CONTACT'].map((item, index) => (
               <motion.button
                 key={item}
@@ -94,7 +94,7 @@ export default function MainScreen({ onNavigate }) {
                   if (item === 'ABOUT US') onNavigate('about');
                   if (item === 'CONTACT') onNavigate('contact');
                 }}
-                className="text-white font-black hover:text-[#fbbf24] transition-colors duration-300 text-base sm:text-lg md:text-2xl uppercase tracking-wider cursor-pointer"
+                className="text-white font-black hover:text-[#fbbf24] transition-colors duration-300 text-xs sm:text-sm md:text-lg lg:text-2xl uppercase tracking-wider cursor-pointer"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 + index * 0.1, duration: 0.5 }}
@@ -210,7 +210,6 @@ export default function MainScreen({ onNavigate }) {
             ABHYUDAYA ’25
           </motion.span>
         </motion.div>
-      )}
-    </div>
+      )}    </div>
   );
 }

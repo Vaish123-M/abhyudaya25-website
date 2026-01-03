@@ -245,7 +245,7 @@ export default function EventsPage({ onNavigate }) {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.8, duration: 0.6 }}
         >
-          <p className="text-lg sm:text-xl md:text-2xl font-poppins font-bold drop-shadow-lg uppercase tracking-widest">
+          <p className="text-sm sm:text-lg md:text-2xl font-poppins font-bold drop-shadow-lg uppercase tracking-wide sm:tracking-widest">
             {"Discover 12 Amazing Competitions & Experiences".split(" ").map((word, idx) => (
               <motion.span
                 key={idx}
@@ -301,7 +301,7 @@ export default function EventsPage({ onNavigate }) {
 
       {/* Events Grid */}
       <motion.div 
-        className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8 lg:gap-10 relative z-10 px-4 sm:px-6 md:px-8 pb-16"
+        className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 md:gap-8 lg:gap-10 relative z-10 px-3 sm:px-6 md:px-8 pb-16"
         variants={containerVariants}
         initial="hidden"
         animate="visible"

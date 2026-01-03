@@ -68,7 +68,7 @@ export default function IntroScreen({ onEnter }) {
       {/* Enter Button */}
       <motion.button
         onClick={handleEnterClick}
-        className="px-8 sm:px-12 py-4 sm:py-5 text-white rounded-full text-lg sm:text-2xl font-black shadow-2xl border-2 border-amber-400/50 relative z-20 uppercase tracking-wider"
+        className="px-6 sm:px-12 py-3 sm:py-5 text-white rounded-full text-base sm:text-xl md:text-2xl font-black shadow-2xl border-2 border-amber-400/50 relative z-20 uppercase tracking-widest"
         style={{
           background: "linear-gradient(135deg, #d97706, #f59e0b, #ea580c)",
           boxShadow: "0 0 40px rgba(245, 158, 11, 0.8), inset 0 0 20px rgba(255, 255, 255, 0.2)"
