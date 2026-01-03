@@ -33,7 +33,7 @@ const EVENT_DATA = {
     rulebookUrl: "https://example.com/pragyan-lecture-series.pdf",
     contact: [{ name: "Coordinator", phone: "+91-9666666666" }],
     prizePool: "—",
-    venue: "Auditorium"
+    venue: "Valmiki Bhavan + Thengadi Bhavan"
   },
   "event-pragyan-panel": {
     title: "Pragyan Panel Discussion",
@@ -47,7 +47,7 @@ const EVENT_DATA = {
     rulebookUrl: "https://example.com/panel-details.pdf",
     contact: [{ name: "Coordinator", phone: "+91-9888888888" }],
     prizePool: "—",
-    venue: "Hall A"
+    venue: "On Ground"
   },
   "event-speech": {
     title: "Speech Competition",
@@ -127,7 +127,7 @@ const EVENT_DATA = {
       { name: "Coordinator 2", phone: "+91-9111111111" }
     ],
     prizePool: "₹21,000",
-    venue: "Auditorium + Lab Block"
+    venue: "Ramdeobaba University"
   },
   "event-project": {
     title: "Project Competition — Pradarshanam",
@@ -178,7 +178,7 @@ const EVENT_DATA = {
     rulebookUrl: "https://example.com/group-discussion-rulebook.pdf",
     contact: [{ name: "Coordinator", phone: "+91-9555555556" }],
     prizePool: "₹6,000",
-    venue: "Conference Room"
+    venue: "Yadav Bhavan"
   },
   "event-open-stage": {
     title: "Open Stage",
