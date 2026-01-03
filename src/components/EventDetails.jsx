@@ -6,7 +6,7 @@ const EVENT_DATA = {
     posterUrl: "/assets/ust-poster.jpg",
     registerUrl: "https://forms.gle/your-ust-form",
     teamSize: "1-3",
-    entryFee: "₹200",
+    entryFee: "₹100",
     perks: ["Certificates", "Recognition"],
     about: "Compete as a socially conscious technocrat—solve civic-tech problems with impact-first thinking.",
     rounds: [
@@ -15,34 +15,23 @@ const EVENT_DATA = {
     ],
     rulebookUrl: "https://example.com/ust-rulebook.pdf",
     contact: [{ name: "Coordinator", phone: "+91-9555555555" }],
-    prizePool: "₹8,000",
+    prizePool: "₹9,000",
     venue: "Seminar Hall"
   },
-  "event-pragyan-lecture-1": {
-    title: "Pragyan Lecture Series — Lecture 1",
-    posterUrl: "/assets/pragyan-lecture-1.jpg",
-    registerUrl: "https://forms.gle/your-pragyan-1",
+  "event-pragyan-lecture-series": {
+    title: "Pragyan Lecture Series",
+    posterUrl: "/assets/pragyan-lecture.jpg",
+    registerUrl: "https://forms.gle/your-pragyan-lectures",
     teamSize: "Individual",
-    entryFee: "Free",
+    entryFee: "₹100",
     perks: ["Certificates"],
-    about: "An inspiring talk by eminent speaker—perspectives, insights, and Q&A.",
-    rounds: [{ name: "Session", detail: "Talk + Q&A" }],
-    rulebookUrl: "https://example.com/pragyan-lecture-1.pdf",
+    about: "A two-part enlightening lecture series featuring eminent speakers with perspectives, insights, and interactive Q&A sessions.",
+    rounds: [
+      { name: "Lecture 1", detail: "First talk + Q&A" },
+      { name: "Lecture 2", detail: "Second talk + Q&A" }
+    ],
+    rulebookUrl: "https://example.com/pragyan-lecture-series.pdf",
     contact: [{ name: "Coordinator", phone: "+91-9666666666" }],
-    prizePool: "—",
-    venue: "Auditorium"
-  },
-  "event-pragyan-lecture-2": {
-    title: "Pragyan Lecture Series — Lecture 2",
-    posterUrl: "/assets/pragyan-lecture-2.jpg",
-    registerUrl: "https://forms.gle/your-pragyan-2",
-    teamSize: "Individual",
-    entryFee: "Free",
-    perks: ["Certificates"],
-    about: "Deep-dive session to broaden your understanding and curiosity.",
-    rounds: [{ name: "Session", detail: "Talk + Q&A" }],
-    rulebookUrl: "https://example.com/pragyan-lecture-2.pdf",
-    contact: [{ name: "Coordinator", phone: "+91-9777777777" }],
     prizePool: "—",
     venue: "Auditorium"
   },
@@ -51,7 +40,7 @@ const EVENT_DATA = {
     posterUrl: "/assets/pragyan-panel.jpg",
     registerUrl: "https://forms.gle/your-panel",
     teamSize: "Audience",
-    entryFee: "Free",
+    entryFee: "₹100",
     perks: ["Certificates"],
     about: "Experts debate contemporary topics—hear multiple sides and ask questions.",
     rounds: [{ name: "Panel", detail: "Discussion + Audience Q&A" }],
@@ -74,7 +63,7 @@ const EVENT_DATA = {
     ],
     rulebookUrl: "https://example.com/speech-rulebook.pdf",
     contact: [{ name: "Coordinator", phone: "+91-9898989898" }],
-    prizePool: "₹5,000",
+    prizePool: "₹6,000",
     venue: "Auditorium"
   },
   "event-reel-making": {
@@ -102,7 +91,7 @@ const EVENT_DATA = {
     rounds: [{ name: "On-site", detail: "Timed drawing" }],
     rulebookUrl: "https://example.com/drawing-rulebook.pdf",
     contact: [{ name: "Coordinator", phone: "+91-9686868686" }],
-    prizePool: "₹4,000",
+    prizePool: "₹6,000",
     venue: "Art Room"
   },
   "event-treasure-hunt": {
@@ -110,13 +99,13 @@ const EVENT_DATA = {
     posterUrl: "/assets/treasure-hunt.jpg",
     registerUrl: "https://forms.gle/your-treasure",
     teamSize: "2-4",
-    entryFee: "₹200 per team",
+    entryFee: "₹100 per team",
     perks: ["Certificates", "Fun"],
     about: "Solve clues, race through campus, and find the treasure!",
     rounds: [{ name: "Hunt", detail: "Clue chase" }],
     rulebookUrl: "https://example.com/treasure-rulebook.pdf",
     contact: [{ name: "Coordinator", phone: "+91-9676767676" }],
-    prizePool: "₹7,000",
+    prizePool: "₹9,000",
     venue: "Campus"
   },
   "event-hackathon": {
@@ -124,7 +113,7 @@ const EVENT_DATA = {
     posterUrl: "/assets/hackathon-poster.jpg", // replace with actual path
     registerUrl: "https://forms.gle/your-hackathon-form", // replace
     teamSize: "1-4",
-    entryFee: "₹500 per team",
+    entryFee: "₹100 per team",
     perks: ["Certificates", "Goodies", "Mentorship", "Food"],
     about: "A national-level 24-hour innovation challenge where teams solve real-world problem statements, earn XP, and build prototypes to top the live leaderboard.",
     rounds: [
@@ -137,7 +126,7 @@ const EVENT_DATA = {
       { name: "Coordinator 1", phone: "+91-9000000000" },
       { name: "Coordinator 2", phone: "+91-9111111111" }
     ],
-    prizePool: "₹50,000",
+    prizePool: "₹21,000",
     venue: "Auditorium + Lab Block"
   },
   "event-project": {
@@ -145,7 +134,7 @@ const EVENT_DATA = {
     posterUrl: "/assets/project-poster.jpg",
     registerUrl: "https://forms.gle/your-project-form",
     teamSize: "1-3",
-    entryFee: "₹300 per project",
+    entryFee: "₹100 per project",
     perks: ["Certificates", "Showcase", "Feedback"],
     about: "Showcase your prototypes — circuits, hardware, and smart systems.",
     rounds: [
@@ -154,7 +143,7 @@ const EVENT_DATA = {
     ],
     rulebookUrl: "https://example.com/project-rulebook.pdf",
     contact: [{ name: "Coordinator", phone: "+91-9222222222" }],
-    prizePool: "₹20,000",
+    prizePool: "₹10,000",
     venue: "Expo Hall"
   },
   "event-yuva-sansad": {
@@ -162,7 +151,7 @@ const EVENT_DATA = {
     posterUrl: "/assets/yuva-sansad-poster.jpg",
     registerUrl: "https://forms.gle/your-yuva-form",
     teamSize: "Individual",
-    entryFee: "₹200",
+    entryFee: "₹100",
     perks: ["Certificates", "Best Speaker Award"],
     about: "Leadership and governance simulation — debate policies and propose solutions.",
     rounds: [
@@ -171,8 +160,25 @@ const EVENT_DATA = {
     ],
     rulebookUrl: "https://example.com/yuva-rulebook.pdf",
     contact: [{ name: "Coordinator", phone: "+91-9333333333" }],
-    prizePool: "₹15,000",
+    prizePool: "₹8,000",
     venue: "Conference Hall"
+  },
+  "event-group-discussion": {
+    title: "Group Discussion",
+    posterUrl: "/assets/group-discussion.jpg",
+    registerUrl: "https://forms.gle/your-group-discussion",
+    teamSize: "4-6",
+    entryFee: "₹100",
+    perks: ["Certificates"],
+    about: "Demonstrate your communication and critical thinking skills in a structured group discussion on contemporary topics.",
+    rounds: [
+      { name: "Prelims", detail: "Topic presentation" },
+      { name: "Final", detail: "Group discussion" }
+    ],
+    rulebookUrl: "https://example.com/group-discussion-rulebook.pdf",
+    contact: [{ name: "Coordinator", phone: "+91-9555555556" }],
+    prizePool: "₹6,000",
+    venue: "Conference Room"
   },
   "event-open-stage": {
     title: "Open Stage",
@@ -185,7 +191,7 @@ const EVENT_DATA = {
     rounds: [{ name: "Performance", detail: "Live showcase" }],
     rulebookUrl: "https://example.com/open-stage-rulebook.pdf",
     contact: [{ name: "Coordinator", phone: "+91-9444444444" }],
-    prizePool: "₹10,000",
+    prizePool: "₹6,000",
     venue: "Main Stage"
   }
 };

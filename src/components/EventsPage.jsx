@@ -35,29 +35,29 @@ export default function EventsPage({ onNavigate }) {
     },
     {
       id: 2,
-      title: "Pragyan Lecture Series - Lecture 1",
-      description: "First lecture in the enlightening Pragyan Lecture Series",
-      detailText: "An inspiring talk by eminent speaker—perspectives, insights, and Q&A.",
-      route: "event-pragyan-lecture-1",
+      title: "Pragyan Lecture Series",
+      description: "Two enlightening lectures by eminent speakers with insights and Q&A",
+      detailText: "An inspiring two-part lecture series—perspectives, insights, and interactive sessions.",
+      route: "event-pragyan-lecture-series",
       icon: "🎤",
       category: "intellectual"
     },
     {
       id: 3,
-      title: "Pragyan Lecture Series - Lecture 2",
-      description: "Second lecture in the enlightening Pragyan Lecture Series",
-      detailText: "Deep-dive session to broaden your understanding and curiosity.",
-      route: "event-pragyan-lecture-2",
-      icon: "🎤",
-      category: "intellectual"
-    },
-    {
-      id: 4,
       title: "Pragyan Panel Discussion",
       description: "Insightful panel discussion bringing diverse perspectives",
       detailText: "Experts debate contemporary topics—hear multiple sides and ask questions.",
       route: "event-pragyan-panel",
       icon: "💬",
+      category: "intellectual"
+    },
+    {
+      id: 4,
+      title: "Group Discussion",
+      description: "Showcase your communication and critical thinking in a group setting",
+      detailText: "Participate in structured discussions on contemporary topics.",
+      route: "event-group-discussion",
+      icon: "🗣",
       category: "intellectual"
     },
     {
