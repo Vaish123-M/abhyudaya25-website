@@ -4,7 +4,7 @@ const EVENT_DATA = {
   "event-ultimate-socio-technocrat": {
     title: "Ultimate Socio Technocrat",
     posterUrl: "/assets/ust-poster.jpg",
-    registerUrl: "https://forms.gle/your-ust-form",
+    registerUrl: "https://forms.gle/v9oVjrefsgEKrwEe6",
     teamSize: "1-3",
     entryFee: "₹100",
     perks: ["Certificates", "Recognition"],
