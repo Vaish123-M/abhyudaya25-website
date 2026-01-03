@@ -16,7 +16,7 @@ const EVENT_DATA = {
     rulebookUrl: "https://example.com/ust-rulebook.pdf",
     contact: [{ name: "Coordinator", phone: "+91-9555555555" }],
     prizePool: "₹9,000",
-    venue: "Seminar Hall"
+    venue: "Pandhuran Bhavan"
   },
   "event-pragyan-lecture-series": {
     title: "Pragyan Lecture Series",
@@ -64,7 +64,7 @@ const EVENT_DATA = {
     rulebookUrl: "https://example.com/speech-rulebook.pdf",
     contact: [{ name: "Coordinator", phone: "+91-9898989898" }],
     prizePool: "₹6,000",
-    venue: "Auditorium"
+    venue: "Madhav Bhavan"
   },
   "event-reel-making": {
     title: "Reel Making Competition",
@@ -78,7 +78,7 @@ const EVENT_DATA = {
     rulebookUrl: "https://example.com/reel-rulebook.pdf",
     contact: [{ name: "Coordinator", phone: "+91-9797979797" }],
     prizePool: "₹6,000",
-    venue: "Online"
+    venue: "Yadav Bhavan"
   },
   "event-drawing": {
     title: "Drawing Competition",
@@ -92,7 +92,7 @@ const EVENT_DATA = {
     rulebookUrl: "https://example.com/drawing-rulebook.pdf",
     contact: [{ name: "Coordinator", phone: "+91-9686868686" }],
     prizePool: "₹6,000",
-    venue: "Art Room"
+    venue: "Madhav Bhavan"
   },
   "event-treasure-hunt": {
     title: "Treasure Hunt",
@@ -106,7 +106,7 @@ const EVENT_DATA = {
     rulebookUrl: "https://example.com/treasure-rulebook.pdf",
     contact: [{ name: "Coordinator", phone: "+91-9676767676" }],
     prizePool: "₹9,000",
-    venue: "Campus"
+    venue: "Maharshi Vyas Sabagruh"
   },
   "event-hackathon": {
     title: "Hackathon — Sankalpthon",
@@ -161,7 +161,7 @@ const EVENT_DATA = {
     rulebookUrl: "https://example.com/yuva-rulebook.pdf",
     contact: [{ name: "Coordinator", phone: "+91-9333333333" }],
     prizePool: "₹8,000",
-    venue: "Conference Hall"
+    venue: "Yadav Bhavan (Ground Floor) - Round 1, Maharshi Vyas Sabagruh - Round 2"
   },
   "event-group-discussion": {
     title: "Group Discussion",
