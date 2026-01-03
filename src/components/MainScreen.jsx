@@ -132,7 +132,7 @@ export default function MainScreen({ onNavigate }) {
           transition={{ delay: 1.2, duration: 0.6, type: "spring" }}
         >
         <motion.button
-          onClick={() => alert('Register clicked!')}
+          onClick={() => onNavigate('events')}
           className="relative px-8 sm:px-12 md:px-16 lg:px-20 py-4 sm:py-6 md:py-7 lg:py-8 font-black text-lg sm:text-2xl md:text-3xl uppercase tracking-wider overflow-hidden group"
           whileHover={{ scale: 1.08 }}
           whileTap={{ scale: 0.95 }}

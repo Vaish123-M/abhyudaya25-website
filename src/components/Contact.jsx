@@ -158,7 +158,7 @@ export default function Contact({ onNavigate = () => {} }) {
             className="grid md:grid-cols-3 gap-6 mb-12"
           >
             {[
-              { icon: '📧', label: 'Email', value: 'info@cei.com' },
+              { icon: '📧', label: 'Email', value: 'engineeringindia2047@gmail.com' },
               { icon: '📞', label: 'Phone', value: '+91 98765 43210' },
               { icon: '📍', label: 'Location', value: 'Smruti Mandir' }
             ].map((item, idx) => (
