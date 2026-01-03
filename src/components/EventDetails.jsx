@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 
 const EVENT_DATA = {
@@ -198,6 +199,10 @@ const EVENT_DATA = {
 
 export default function EventDetails({ route, onNavigate }) {
   const data = EVENT_DATA[route];
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, [route]);
 
   if (!data) {
     return (
