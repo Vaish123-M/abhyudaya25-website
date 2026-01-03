@@ -21,7 +21,7 @@ const EVENT_DATA = {
   "event-pragyan-lecture-series": {
     title: "Pragyan Lecture Series",
     posterUrl: "/assets/pragyan-lecture.jpg",
-    registerUrl: "https://forms.gle/your-pragyan-lectures",
+    registerUrl: "https://forms.gle/U4j88Td6TJcM6Gyu9",
     teamSize: "Individual",
     entryFee: "₹100",
     perks: ["Certificates"],
@@ -38,7 +38,7 @@ const EVENT_DATA = {
   "event-pragyan-panel": {
     title: "Pragyan Panel Discussion",
     posterUrl: "/assets/pragyan-panel.jpg",
-    registerUrl: "https://forms.gle/your-panel",
+    registerUrl: "https://forms.gle/U4j88Td6TJcM6Gyu9",
     teamSize: "Audience",
     entryFee: "₹100",
     perks: ["Certificates"],
@@ -52,7 +52,7 @@ const EVENT_DATA = {
   "event-speech": {
     title: "Speech Competition",
     posterUrl: "/assets/speech.jpg",
-    registerUrl: "https://forms.gle/your-speech",
+    registerUrl: "https://forms.gle/U4j88Td6TJcM6Gyu9",
     teamSize: "Individual",
     entryFee: "₹100",
     perks: ["Certificates"],
@@ -69,7 +69,7 @@ const EVENT_DATA = {
   "event-reel-making": {
     title: "Reel Making Competition",
     posterUrl: "/assets/reel.jpg",
-    registerUrl: "https://forms.gle/your-reel",
+    registerUrl: "https://forms.gle/U4j88Td6TJcM6Gyu9",
     teamSize: "1-3",
     entryFee: "₹100",
     perks: ["Certificates", "Social Feature"],
@@ -83,7 +83,7 @@ const EVENT_DATA = {
   "event-drawing": {
     title: "Drawing Competition",
     posterUrl: "/assets/drawing.jpg",
-    registerUrl: "https://forms.gle/your-drawing",
+    registerUrl: "https://forms.gle/U4j88Td6TJcM6Gyu9",
     teamSize: "Individual",
     entryFee: "₹100",
     perks: ["Certificates"],
@@ -97,7 +97,7 @@ const EVENT_DATA = {
   "event-treasure-hunt": {
     title: "Treasure Hunt",
     posterUrl: "/assets/treasure-hunt.jpg",
-    registerUrl: "https://forms.gle/your-treasure",
+    registerUrl: "https://forms.gle/oGW1TA2f7tm9dNwC7",
     teamSize: "2-4",
     entryFee: "₹100 per team",
     perks: ["Certificates", "Fun"],
@@ -111,7 +111,7 @@ const EVENT_DATA = {
   "event-hackathon": {
     title: "Hackathon — Sankalpthon",
     posterUrl: "/assets/hackathon-poster.jpg", // replace with actual path
-    registerUrl: "https://forms.gle/your-hackathon-form", // replace
+    registerUrl: "https://forms.gle/jYBbkYTwhuWBqRDS7",
     teamSize: "1-4",
     entryFee: "₹100 per team",
     perks: ["Certificates", "Goodies", "Mentorship", "Food"],
@@ -132,7 +132,7 @@ const EVENT_DATA = {
   "event-project": {
     title: "Project Competition — Pradarshanam",
     posterUrl: "/assets/project-poster.jpg",
-    registerUrl: "https://forms.gle/your-project-form",
+    registerUrl: "https://forms.gle/EoreVKfNNV2fiPMa6",
     teamSize: "1-3",
     entryFee: "₹100 per project",
     perks: ["Certificates", "Showcase", "Feedback"],
@@ -149,7 +149,7 @@ const EVENT_DATA = {
   "event-yuva-sansad": {
     title: "Youth Parliament — Yuva Sansad",
     posterUrl: "/assets/yuva-sansad-poster.jpg",
-    registerUrl: "https://forms.gle/your-yuva-form",
+    registerUrl: "https://forms.gle/eXWMZwZfMf5ApNZSA",
     teamSize: "Individual",
     entryFee: "₹100",
     perks: ["Certificates", "Best Speaker Award"],
@@ -166,7 +166,7 @@ const EVENT_DATA = {
   "event-group-discussion": {
     title: "Group Discussion",
     posterUrl: "/assets/group-discussion.jpg",
-    registerUrl: "https://forms.gle/your-group-discussion",
+    registerUrl: "https://forms.gle/U4j88Td6TJcM6Gyu9",
     teamSize: "4-6",
     entryFee: "₹100",
     perks: ["Certificates"],
@@ -183,7 +183,7 @@ const EVENT_DATA = {
   "event-open-stage": {
     title: "Open Stage",
     posterUrl: "/assets/open-stage-poster.jpg",
-    registerUrl: "https://forms.gle/your-open-stage-form",
+    registerUrl: "https://forms.gle/LPGtSnCmAaDgwGYD9",
     teamSize: "Solo/Duo/Group",
     entryFee: "₹100",
     perks: ["Certificates", "Stage Photos"],
