@@ -215,8 +215,8 @@ export default function EventsPage({ onNavigate }) {
           style={{
             fontFamily: 'Poppins, system-ui, sans-serif',
             fontWeight: 900,
-            fontSize: 'clamp(32px, 7vw, 90px)',
-            letterSpacing: '0.15em',
+            fontSize: 'clamp(24px, 5.5vw, 90px)',
+            letterSpacing: '0.12em',
             textShadow: '0 4px 18px rgba(0,0,0,0.25), 0 0 30px rgba(249,115,22,0.45), 0 0 50px rgba(37,99,235,0.3)',
             background: 'linear-gradient(90deg, #f97316, #22c55e, #2563eb)',
             WebkitBackgroundClip: 'text',
