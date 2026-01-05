@@ -34,6 +34,42 @@ export default function EventsPage({ onNavigate }) {
       category: "tech"
     },
     {
+      id: 9,
+      title: "Hackathon",
+      description: "Build innovative solutions in a time-bound challenge",
+      detailText: "A 24-hour sprint to prototype and pitch your idea.",
+      route: "event-hackathon",
+      icon: "💻",
+      category: "tech"
+    },
+    {
+      id: 8,
+      title: "Treasure Hunt",
+      description: "An adventurous quest full of surprises and challenges",
+      detailText: "Solve clues, race through campus, and find the treasure!",
+      route: "event-treasure-hunt",
+      icon: "🗺️",
+      category: "energetic"
+    },
+    {
+      id: 11,
+      title: "Youth Parliament",
+      description: "Debate and discuss contemporary issues",
+      detailText: "Simulate the parliament—debate policies and propose reforms.",
+      route: "event-yuva-sansad",
+      icon: "🏛️",
+      category: "intellectual"
+    },
+    {
+      id: 10,
+      title: "Project Competition",
+      description: "Showcase your projects and compete with the best",
+      detailText: "Demo your project to judges and the crowd.",
+      route: "event-project",
+      icon: "🚀",
+      category: "tech"
+    },
+    {
       id: 2,
       title: "Pragyan Lecture Series",
       description: "Two enlightening lectures by eminent speakers with insights and Q&A",
@@ -86,42 +122,6 @@ export default function EventsPage({ onNavigate }) {
       route: "event-drawing",
       icon: "🎨",
       category: "creative"
-    },
-    {
-      id: 8,
-      title: "Treasure Hunt",
-      description: "An adventurous quest full of surprises and challenges",
-      detailText: "Solve clues, race through campus, and find the treasure!",
-      route: "event-treasure-hunt",
-      icon: "🗺️",
-      category: "energetic"
-    },
-    {
-      id: 9,
-      title: "Hackathon",
-      description: "Build innovative solutions in a time-bound challenge",
-      detailText: "A 24-hour sprint to prototype and pitch your idea.",
-      route: "event-hackathon",
-      icon: "💻",
-      category: "tech"
-    },
-    {
-      id: 10,
-      title: "Project Competition",
-      description: "Showcase your projects and compete with the best",
-      detailText: "Demo your project to judges and the crowd.",
-      route: "event-project",
-      icon: "🚀",
-      category: "tech"
-    },
-    {
-      id: 11,
-      title: "Youth Parliament",
-      description: "Debate and discuss contemporary issues",
-      detailText: "Simulate the parliament—debate policies and propose reforms.",
-      route: "event-yuva-sansad",
-      icon: "🏛️",
-      category: "intellectual"
     },
     {
       id: 12,
