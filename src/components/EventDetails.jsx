@@ -316,7 +316,13 @@ export default function EventDetails({ route, onNavigate }) {
           {/* Poster + Register */}
           <div className="space-y-4">
             <div className="rounded-lg overflow-hidden border border-white/20 bg-white/5">
-              <img src={data.posterUrl} alt={`${data.title} poster`} className="w-full h-auto" />
+              <img
+                src={data.posterUrl}
+                alt={`${data.title} poster for Abhyudaya 2025 in Nagpur`}
+                loading="lazy"
+                decoding="async"
+                className="w-full h-auto"
+              />
             </div>
             <a href={data.registerUrl} target="_blank" rel="noreferrer" className="block text-center px-6 py-4 bg-gradient-to-r from-orange-500 to-amber-500 rounded-full font-black">Register Here</a>
           </div>

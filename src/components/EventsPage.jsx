@@ -307,13 +307,13 @@ export default function EventsPage({ onNavigate }) {
         animate="visible"
       >
         {events.map((event, index) => (
-          <motion.div
-            key={event.id}
-            variants={cardVariants}
-            onMouseEnter={() => setHoveredCard(event.id)}
-            onMouseLeave={() => setHoveredCard(null)}
-            className="h-full"
-          >
+          <article key={event.id} className="h-full">
+            <motion.div
+              variants={cardVariants}
+              onMouseEnter={() => setHoveredCard(event.id)}
+              onMouseLeave={() => setHoveredCard(null)}
+              className="h-full"
+            >
             <motion.div
               className="relative h-full rounded-2xl overflow-hidden cursor-pointer group shadow-2xl"
               whileHover={{ y: -12, scale: 1.03 }}
@@ -472,7 +472,8 @@ export default function EventsPage({ onNavigate }) {
                 </motion.div>
               )}
             </motion.div>
-          </motion.div>
+            </motion.div>
+          </article>
         ))}
       </motion.div>
 
