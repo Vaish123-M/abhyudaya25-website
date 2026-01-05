@@ -126,7 +126,7 @@ export default function MainScreen({ onNavigate }) {
       {/* Register Button - Bottom Right */}
       {showUi && (
         <motion.div 
-          className="absolute bottom-6 right-4 sm:bottom-10 sm:right-8 md:bottom-12 md:right-12 z-40"
+          className="absolute bottom-16 right-4 sm:bottom-20 sm:right-8 md:bottom-24 md:right-12 z-40"
           initial={{ opacity: 0, scale: 0.8, y: 100 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ delay: 1.2, duration: 0.6, type: "spring" }}
@@ -167,12 +167,13 @@ export default function MainScreen({ onNavigate }) {
         </motion.div>
       )}
 
-      {/* Abhyudaya '25 text bottom-left */}
+      {/* Abhyudaya '25 text centered on page */}
       {showUi && (
         <motion.div
-          className="absolute left-3 sm:left-6 bottom-24 sm:bottom-6 z-40"
-          initial={{ opacity: 0, x: -18, y: 18 }}
-          animate={{ opacity: 1, x: 0, y: 0 }}
+          className="absolute inset-0 z-40 flex items-center justify-center pointer-events-none"
+          style={{ transform: "translateY(-120px)" }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ delay: 0.9, duration: 0.7, ease: "easeOut" }}
         >
           <motion.span
@@ -180,36 +181,25 @@ export default function MainScreen({ onNavigate }) {
             style={{
               fontFamily: "Poppins, system-ui, sans-serif",
               letterSpacing: "0.12em",
-              fontSize: "clamp(20px, 5vw, 60px)",
-              textShadow: "0 4px 18px rgba(0,0,0,0.25), 0 0 24px rgba(217,119,6,0.45)",
-              background: "linear-gradient(90deg, #d97706, #f59e0b, #ea580c)",
-              WebkitBackgroundClip: "text",
-              color: "transparent",
+              fontSize: "clamp(20px, 4.5vw, 52px)",
+              textShadow: "0 6px 18px rgba(0,0,0,0.55), 0 0 18px rgba(92,45,10,0.6)",
+              color: "#8b4513",
               display: "inline-block"
             }}
-            initial={{ opacity: 0, scale: 0.8, y: 18, rotate: -2 }}
-            animate={{
-              opacity: 1,
-              scale: [0.98, 1.18, 1.02, 1],
-              y: [10, -12, 4, 0],
-              rotate: [-2, 1, -0.5, 0]
-            }}
-            transition={{
-              duration: 2.6,
-              ease: "easeOut",
-              repeat: Infinity,
-              repeatDelay: 1.4
-            }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.9, ease: "easeOut" }}
             whileHover={{
-              scale: 1.1,
-              y: -6,
-              rotate: 1,
+              scale: 1.08,
+              y: -2,
+              rotate: 0.5,
               transition: { duration: 0.3, ease: "easeOut" }
             }}
           >
             ABHYUDAYA ’25
           </motion.span>
         </motion.div>
-      )}    </div>
+      )}
+    </div>
   );
 }

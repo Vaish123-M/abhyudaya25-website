@@ -279,10 +279,8 @@ export default function EventDetails({ route, onNavigate }) {
             {/* Quick Info */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 mb-6 sm:mb-8">
               <InfoCard label="Team Size" value={data.teamSize} />
-              <InfoCard label="Entry Fee" value={data.entryFee} />
-              <InfoCard label="Prize Pool" value={data.prizePool} />
-              <InfoCard label="Venue" value={data.venue} />
-              <InfoCard label="Perks" value={data.perks.join(', ')} />
+              <InfoCard label="Entry Fee (per person)" value={data.entryFee} />
+              {data.prizePool !== "—" && <InfoCard label="Prize Pool" value={data.prizePool} />}
             </div>
 
             {/* Rounds */}
@@ -320,7 +318,7 @@ export default function EventDetails({ route, onNavigate }) {
             <div className="rounded-lg overflow-hidden border border-white/20 bg-white/5">
               <img src={data.posterUrl} alt={`${data.title} poster`} className="w-full h-auto" />
             </div>
-            <a href={data.registerUrl} target="_blank" rel="noreferrer" className="block text-center px-6 py-4 bg-gradient-to-r from-orange-500 to-amber-500 rounded-full font-black">Register</a>
+            <a href={data.registerUrl} target="_blank" rel="noreferrer" className="block text-center px-6 py-4 bg-gradient-to-r from-orange-500 to-amber-500 rounded-full font-black">Register Here</a>
           </div>
         </div>
       </div>

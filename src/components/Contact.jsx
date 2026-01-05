@@ -159,8 +159,8 @@ export default function Contact({ onNavigate = () => {} }) {
           >
             {[
               { icon: '📧', label: 'Email', value: 'engineeringindia2047@gmail.com' },
-              { icon: '📞', label: 'Phone', value: '+91 98765 43210' },
-              { icon: '📍', label: 'Location', value: 'Smruti Mandir' }
+              { icon: '📞', label: 'Phone', value: '+91 70831 68754 / +91 77210 67350' },
+              { icon: '📍', label: 'Location', value: 'Smruti Mandir,Reshimbagh' }
             ].map((item, idx) => (
               <motion.div
                 key={item.label}
@@ -284,19 +284,14 @@ export default function Contact({ onNavigate = () => {} }) {
 
       <footer className="bg-slate-900 text-slate-100 py-12 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10 items-center">
+          <div className="flex flex-col items-center text-center gap-8 mb-10">
             <div>
-              <h3 className="text-3xl font-extrabold mb-3" style={{ background: 'linear-gradient(90deg, #f97316, #22c55e, #2563eb)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Abhyudaya'25</h3>
-              <p className="text-sm text-slate-400 max-w-sm">
+              <h3 className="text-4xl font-extrabold mb-4" style={{ background: 'linear-gradient(90deg, #f97316, #22c55e, #2563eb)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Abhyudaya'25</h3>
+              <p className="text-base text-slate-300 max-w-2xl mx-auto">
                 An annual celebration of innovation, sustainability, and social responsibility driven by Panch Parivartan.
               </p>
             </div>
-            <div className="space-y-3 text-sm text-slate-400">
-              <div className="flex items-center gap-3">📧 info@clubengineeringindia.com</div>
-              <div className="flex items-center gap-3">📞 +91 98765 43210</div>
-              <div className="flex items-center gap-3">📍 BITS Pilani, Rajasthan</div>
-            </div>
-            <div className="flex md:justify-end gap-4">
+            <div className="flex justify-center gap-6">
               <motion.a
                 href="https://www.instagram.com/engineering_india2047?igsh=MTNpaWthOWRvajI4eA=="
                 target="_blank"

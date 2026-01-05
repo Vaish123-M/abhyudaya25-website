@@ -467,7 +467,7 @@ export default function EventsPage({ onNavigate }) {
                     whileTap={{ scale: 0.95 }}
                     onClick={(e) => { e.stopPropagation(); onNavigate(event.route || 'events'); }}
                   >
-                    Explore
+                    Register
                   </motion.button>
                 </motion.div>
               )}
@@ -477,51 +477,6 @@ export default function EventsPage({ onNavigate }) {
       </motion.div>
 
       {/* Bottom CTA */}
-      <motion.div
-        className="text-center pt-16 pb-20 relative z-10 px-4 sm:px-6 md:px-8"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5, duration: 0.8 }}
-      >
-        <p className="text-orange-600 text-xl sm:text-2xl mb-10 font-poppins font-black drop-shadow-lg uppercase tracking-widest" style={{ textShadow: '0 0 25px rgba(249, 115, 22, 0.7)' }}>
-          Ready to Participate?
-        </p>
-        <motion.button
-          onClick={() => alert('Register clicked!')}
-          className="relative px-12 sm:px-16 md:px-20 lg:px-24 py-5 sm:py-6 md:py-7 lg:py-8 font-black text-xl sm:text-2xl md:text-3xl uppercase tracking-wider overflow-hidden group"
-          whileHover={{ scale: 1.08, y: -4 }}
-          whileTap={{ scale: 0.95 }}
-          transition={{ duration: 0.25, ease: "easeOut" }}
-        >
-          {/* Wooden Background with texture */}
-          <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-amber-700 via-amber-900 to-amber-800 shadow-2xl border-4 border-amber-600" 
-            style={{
-              backgroundImage: `
-                repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(0,0,0,.1) 2px, rgba(0,0,0,.1) 4px),
-                repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,.1) 2px, rgba(255,255,255,.1) 4px),
-                linear-gradient(135deg, rgba(139, 90, 43, 0.8), rgba(160, 82, 45, 0.8))
-              `,
-              boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.2), 0 8px 16px rgba(0,0,0,0.6)'
-            }}
-          />
-          
-          {/* Glow effect on hover */}
-          <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-red-500/0 via-red-400/0 to-red-500/0 group-hover:from-red-500/30 group-hover:via-red-400/40 group-hover:to-red-500/30 transition-all duration-300 blur-md" />
-          
-          {/* Text with shadow */}
-          <span className="relative text-white drop-shadow-lg font-black" style={{ textShadow: '3px 3px 6px rgba(0,0,0,0.8), 1px 1px 2px rgba(0,0,0,0.5)' }}>
-            REGISTER NOW
-          </span>
-
-          {/* Shine effect */}
-          <motion.div
-            className="absolute inset-0 rounded-lg bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-20"
-            animate={{ x: ['-100%', '100%'] }}
-            transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
-          />
-        </motion.button>
-      </motion.div>
-
       {/* Top Navigation Bar - Match Home Page Exactly */}
       <motion.div 
         className="absolute top-0 left-0 right-0 z-50 bg-gradient-to-b from-black/90 via-black/70 to-transparent px-4 sm:px-6 md:px-8 pt-4 pb-3 sm:pt-5 sm:pb-4"

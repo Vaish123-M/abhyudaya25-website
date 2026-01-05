@@ -17,7 +17,7 @@ export default function IntroScreen({ onEnter }) {
     // Navigate to main screen after animation completes
     setTimeout(() => {
       onEnter();
-    }, 1800);
+    }, 500);
   };
 
   return (
@@ -51,7 +51,7 @@ export default function IntroScreen({ onEnter }) {
         }}
         initial={{ opacity: 0, scale: 1.03 }}
         animate={{ opacity: startColoring ? 1 : 0, scale: startColoring ? 1 : 1.03 }}
-        transition={{ duration: 1.4, ease: "easeInOut" }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
       />
 
       {/* Subtle color-wash pulse during transition */}
@@ -61,7 +61,7 @@ export default function IntroScreen({ onEnter }) {
           style={{ background: "radial-gradient(circle at 50% 50%, rgba(255,255,255,0.25), transparent 45%)" }}
           initial={{ opacity: 0 }}
           animate={{ opacity: [0, 0.6, 0] }}
-          transition={{ duration: 1.2, ease: "easeOut" }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
         />
       )}
 
