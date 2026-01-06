@@ -45,12 +45,12 @@ const EVENT_DATA = {
   },
   "event-pragyan-panel": {
     title: "Pragyan Panel Discussion",
-    posterUrl: posterLectureSeries,
+    posterUrl: null,
     registerUrl: "https://forms.gle/U4j88Td6TJcM6Gyu9",
     teamSize: "Audience",
     entryFee: "₹100",
     about: "Experts debate contemporary topics—hear multiple sides and ask questions.",
-    rulebookUrl: "/rulebooks/Panel Discussion rulebook.pdf",
+    rulebookUrl: "/rulebooks/Panel Discussion_rulebook.pdf",
     contact: [
       { name: "Coordinator 1: Rahul Trivedi", phone: "+91-8668997469" },
       { name: "Coordinator 2: Prajwala Dhurve", phone: "+91-8668997469" }
@@ -261,15 +261,17 @@ export default function EventDetails({ route, onNavigate }) {
 
           {/* Poster + Register */}
           <div className="space-y-4">
-            <div className="rounded-lg overflow-hidden border border-white/20 bg-white/5">
-              <img
-                src={data.posterUrl}
-                alt={`${data.title} poster for Abhyudaya 2025 in Nagpur`}
-                loading="lazy"
-                decoding="async"
-                className="w-full h-auto"
-              />
-            </div>
+            {data.posterUrl && (
+              <div className="rounded-lg overflow-hidden border border-white/20 bg-white/5">
+                <img
+                  src={data.posterUrl}
+                  alt={`${data.title} poster for Abhyudaya 2025 in Nagpur`}
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-auto"
+                />
+              </div>
+            )}
             <a href={data.registerUrl} target="_blank" rel="noreferrer" className="block text-center px-6 py-4 bg-gradient-to-r from-orange-500 to-amber-500 rounded-full font-black">Register Here</a>
           </div>
         </div>
