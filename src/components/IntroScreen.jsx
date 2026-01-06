@@ -37,7 +37,7 @@ export default function IntroScreen({ onEnter }) {
         className="absolute inset-0"
         initial={{ opacity: 0, scale: 1.02 }}
         animate={{ opacity: loaded ? 1 : 0, scale: 1 }}
-        transition={{ duration: 0.9, ease: "easeOut" }}
+        transition={{ duration: 0.4, ease: "easeOut" }}
       />
 
       {/* Colored overlay that blooms over the sketch */}
@@ -51,7 +51,7 @@ export default function IntroScreen({ onEnter }) {
         }}
         initial={{ opacity: 0, scale: 1.03 }}
         animate={{ opacity: startColoring ? 1 : 0, scale: startColoring ? 1 : 1.03 }}
-        transition={{ duration: 0.5, ease: "easeInOut" }}
+        transition={{ duration: 0.3, ease: "easeInOut" }}
       />
 
       {/* Subtle color-wash pulse during transition */}
@@ -61,7 +61,7 @@ export default function IntroScreen({ onEnter }) {
           style={{ background: "radial-gradient(circle at 50% 50%, rgba(255,255,255,0.25), transparent 45%)" }}
           initial={{ opacity: 0 }}
           animate={{ opacity: [0, 0.6, 0] }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
+          transition={{ duration: 0.3, ease: "easeOut" }}
         />
       )}
 

@@ -39,19 +39,19 @@ export default function Contact({ onNavigate = () => {} }) {
             className="absolute -top-40 -left-40 w-80 h-80 rounded-full"
             style={{ background: 'radial-gradient(circle, #f97316/40, transparent)' }}
             animate={{ x: [0, 30, -30, 0], y: [0, -40, 40, 0] }}
-            transition={{ duration: 15, repeat: Infinity, ease: 'easeInOut' }}
+            transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
           />
           <motion.div
             className="absolute top-1/3 right-0 w-96 h-96 rounded-full"
             style={{ background: 'radial-gradient(circle, #22c55e/35, transparent)' }}
             animate={{ x: [0, -40, 40, 0], y: [0, 30, -30, 0] }}
-            transition={{ duration: 18, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
+            transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
           />
           <motion.div
             className="absolute bottom-10 left-1/2 w-72 h-72 rounded-full"
             style={{ background: 'radial-gradient(circle, #2563eb/30, transparent)' }}
             animate={{ x: [0, 25, -25, 0], y: [0, -25, 25, 0] }}
-            transition={{ duration: 20, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
+            transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
           />
         </div>
 
@@ -88,7 +88,7 @@ export default function Contact({ onNavigate = () => {} }) {
           className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-b from-black/70 to-transparent px-4 sm:px-6 md:px-8 py-4 sm:py-6"
           initial={{ y: -100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.6, ease: 'easeOut' }}
+          transition={{ duration: 0.3, ease: 'easeOut' }}
         >
           <div className="flex items-center justify-between max-w-full">
             <div className="flex flex-wrap gap-3 sm:gap-4 md:gap-6 lg:gap-10 items-center justify-center w-full md:w-auto">
@@ -102,10 +102,10 @@ export default function Contact({ onNavigate = () => {} }) {
                     if (item === 'ABOUT US') onNavigate('about')
                     if (item === 'CONTACT') onNavigate('contact')
                   }}
-                  className="text-white font-black transition-colors duration-300 text-base sm:text-xl md:text-2xl uppercase tracking-wider cursor-pointer hover:text-amber-200"
+                  className="text-white font-black transition-colors duration-150 text-base sm:text-xl md:text-2xl uppercase tracking-wider cursor-pointer hover:text-amber-200"
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.3 + index * 0.1, duration: 0.5 }}
+                  transition={{ delay: 0.1 + index * 0.1, duration: 0.25 }}
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -154,7 +154,7 @@ export default function Contact({ onNavigate = () => {} }) {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, staggerChildren: 0.1 }}
+            transition={{ duration: 0.25, staggerChildren: 0.1 }}
             className="grid md:grid-cols-3 gap-6 mb-12"
           >
             {[
@@ -167,7 +167,7 @@ export default function Contact({ onNavigate = () => {} }) {
                 initial={{ opacity: 0, y: 15 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: idx * 0.1, duration: 0.5 }}
+                transition={{ delay: idx * 0.1, duration: 0.25 }}
                 whileHover={{ y: -4, scale: 1.02 }}
                 className="rounded-2xl p-4 sm:p-6 md:p-8 text-center backdrop-blur-sm shadow-lg"
                 style={{
@@ -186,7 +186,7 @@ export default function Contact({ onNavigate = () => {} }) {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.3, delay: 0.2 }}
             className="rounded-3xl overflow-hidden shadow-lg"
             style={{
               background: 'linear-gradient(135deg, #fed7aa/60, #fef3c7/60)',
@@ -233,7 +233,7 @@ export default function Contact({ onNavigate = () => {} }) {
                 style={{ background: 'linear-gradient(135deg, #f97316/30, #22c55e/30)' }}
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.6, duration: 0.4 }}
+                transition={{ delay: 0.3, duration: 0.4 }}
                 whileHover={{ scale: 1.15, y: -3 }}
                 whileTap={{ scale: 0.95 }}
                 aria-label="Instagram"
@@ -250,7 +250,7 @@ export default function Contact({ onNavigate = () => {} }) {
                 style={{ background: 'linear-gradient(135deg, #2563eb/30, #22c55e/30)' }}
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.7, duration: 0.4 }}
+                transition={{ delay: 0.35, duration: 0.4 }}
                 whileHover={{ scale: 1.15, y: -3 }}
                 whileTap={{ scale: 0.95 }}
                 aria-label="LinkedIn"

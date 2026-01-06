@@ -19,13 +19,8 @@ const EVENT_DATA = {
     registerUrl: "https://forms.gle/v9oVjrefsgEKrwEe6",
     teamSize: "3-5",
     entryFee: "₹100",
-    perks: ["Certificates", "Recognition"],
     about: "Compete as a socially conscious technocrat—solve civic-tech problems with impact-first thinking.",
-    rounds: [
-      { name: "7 Days Reporting", detail: "Mandatory on-ground research and daily attendance at site/organization" },
-      { name: "Final Round", detail: "Presentation (Documentary) + Q&A" }
-    ],
-    rulebookUrl: "https://example.com/ust-rulebook.pdf",
+    rulebookUrl: "/rulebooks/Ultimate Socio-Technocrat_rulebook.pdf",
     contact: [
       { name: "Coordinator 1: Prany Pakhonde", phone: "+91-8767974636" },
       { name: "Coordinator 2: Isha Khatri", phone: "+91-8446904436" }
@@ -39,13 +34,8 @@ const EVENT_DATA = {
     registerUrl: "https://forms.gle/U4j88Td6TJcM6Gyu9",
     teamSize: "Individual",
     entryFee: "₹100",
-    perks: ["Certificates"],
     about: "A two-part enlightening lecture series featuring eminent speakers with perspectives, insights, and interactive Q&A sessions.",
-    rounds: [
-      { name: "Lecture 1", detail: "First talk + Q&A" },
-      { name: "Lecture 2", detail: "Second talk + Q&A" }
-    ],
-    rulebookUrl: "https://example.com/pragyan-lecture-series.pdf",
+    rulebookUrl: "/rulebooks/Pragyan Lecture Series_Rulebook.pdf",
     contact: [
       { name: "Coordinator 1: Roshan Ithankar", phone: "+91-8459994371" },
       { name: "Coordinator 2: Tushar Talekar", phone: "+91-7507306312" }
@@ -59,10 +49,8 @@ const EVENT_DATA = {
     registerUrl: "https://forms.gle/U4j88Td6TJcM6Gyu9",
     teamSize: "Audience",
     entryFee: "₹100",
-    perks: ["Certificates"],
     about: "Experts debate contemporary topics—hear multiple sides and ask questions.",
-    rounds: [{ name: "Panel", detail: "Discussion + Audience Q&A" }],
-    rulebookUrl: "https://example.com/panel-details.pdf",
+    rulebookUrl: "/rulebooks/Pragyan Lecture Series_Rulebook.pdf",
     contact: [{ name: "Coordinator", phone: "+91-9888888888" }],
     prizePool: "—",
     venue: "On Ground"
@@ -73,13 +61,8 @@ const EVENT_DATA = {
     registerUrl: "https://forms.gle/U4j88Td6TJcM6Gyu9",
     teamSize: "Individual",
     entryFee: "₹100",
-    perks: ["Certificates"],
     about: "Craft compelling arguments and deliver memorable speeches.",
-    rounds: [
-      { name: "Prelims", detail: "Prepared speech" },
-      { name: "Final", detail: "Extempore" }
-    ],
-    rulebookUrl: "https://example.com/speech-rulebook.pdf",
+    rulebookUrl: "/rulebooks/Speech Competition_Rulebook.pdf",
     contact: [
       { name: "Coordinator 1: Krish Agrawal", phone: "+91-8956369613" },
       { name: "Coordinator 2: Vaishnavi Mamulkar", phone: "+91-9699836744" },
@@ -94,10 +77,8 @@ const EVENT_DATA = {
     registerUrl: "https://forms.gle/U4j88Td6TJcM6Gyu9",
     teamSize: "Individual",
     entryFee: "₹100",
-    perks: ["Certificates", "Social Feature"],
     about: "Make creative reels—story, edit, and wow the audience.",
-    rounds: [{ name: "Submission", detail: "Online reel submission" }],
-    rulebookUrl: "https://example.com/reel-rulebook.pdf",
+    rulebookUrl: "/rulebooks/Silver screen_rulebook.pdf",
     contact: [
       { name: "Coordinator 1: Shreenath Dhole", phone: "+91-9637594399" },
       { name: "Coordinator 2: Pranay Surtavanshi", phone: "+91-9309553192" }
@@ -111,10 +92,8 @@ const EVENT_DATA = {
     registerUrl: "https://forms.gle/U4j88Td6TJcM6Gyu9",
     teamSize: "Individual",
     entryFee: "₹100",
-    perks: ["Certificates"],
     about: "Showcase your art skills—theme-based drawing challenge.",
-    rounds: [{ name: "On-site", detail: "Timed drawing" }],
-    rulebookUrl: "https://example.com/drawing-rulebook.pdf",
+    rulebookUrl: "/rulebooks/Drawing Competition P.pdf",
     contact: [
       { name: "Coordinator 1: Vedant Satpaise", phone: "+91-7057458920" },
       { name: "Coordinator 2: Prachiti Kothekar", phone: "+91-9172013926" },
@@ -129,10 +108,8 @@ const EVENT_DATA = {
     registerUrl: "https://forms.gle/oGW1TA2f7tm9dNwC7",
     teamSize: "3-5 (Individual entries allowed - teams will be formed on spot)",
     entryFee: "₹100 per team",
-    perks: ["Certificates", "Fun"],
     about: "Solve clues, race through campus, and find the treasure!",
-    rounds: [{ name: "Hunt", detail: "Clue chase" }],
-    rulebookUrl: "https://example.com/treasure-rulebook.pdf",
+    rulebookUrl: "/rulebooks/Treasure Hunt_rulebook.pdf",
     contact: [
       { name: "Coordinator 1: Devansh Burhade", phone: "+91-9673903083" },
       { name: "Coordinator 2: Charvi Khandar", phone: "+91-7385395360" }
@@ -145,18 +122,13 @@ const EVENT_DATA = {
     posterUrl: posterHackathon,
     registerUrl: "https://forms.gle/jYBbkYTwhuWBqRDS7",
     teamSize: "1-4",
-    entryFee: "₹100 per team",
-    perks: ["Certificates", "Goodies", "Mentorship", "Food"],
+    entryFee: "₹100/- per person",
+
     about: "A national-level 24-hour innovation challenge where teams solve real-world problem statements, earn XP, and build prototypes to top the live leaderboard.",
-    rounds: [
-      { name: "Round 1", detail: "Ideation + Initial prototype (6 hours)" },
-      { name: "Round 2", detail: "Build + Integrate (12 hours)" },
-      { name: "Final", detail: "Demo + Judging (6 hours)" }
-    ],
-    rulebookUrl: "https://example.com/hackathon-rulebook.pdf",
+    rulebookUrl: "/rulebooks/Hackathon_rulebook.pdf",
     contact: [
-      { name: "Coordinator 1", phone: "+91-9000000000" },
-      { name: "Coordinator 2", phone: "+91-9111111111" }
+      { name: "Coordinator 1: Yashpal Chandewar", phone: "+91-7821903083" },
+      { name: "Coordinator 2: Samruddhi Raut", phone: "+91-7248940875" }
     ],
     prizePool: "₹21,000",
     venue: "Ramdeobaba University"
@@ -167,12 +139,8 @@ const EVENT_DATA = {
     registerUrl: "https://forms.gle/EoreVKfNNV2fiPMa6",
     teamSize: "Free (Any team size)",
     entryFee: "₹100 per project",
-    perks: ["Certificates", "Showcase", "Feedback"],
     about: "Showcase your prototypes — circuits, hardware, and smart systems.",
-    rounds: [
-      { name: "Onsite Prototype Showcase", detail: "Demonstrate your project and present to judges" }
-    ],
-    rulebookUrl: "https://example.com/project-rulebook.pdf",
+    rulebookUrl: "/rulebooks/Project Competition_Rulebook.pdf",
     contact: [
       { name: "Coordinator 1: Tejas Chaudhary", phone: "+91-9356802767" },
       { name: "Coordinator 2: Vaishnavi Bobade", phone: "+91-7666469109" }
@@ -186,13 +154,8 @@ const EVENT_DATA = {
     registerUrl: "https://forms.gle/eXWMZwZfMf5ApNZSA",
     teamSize: "Individual",
     entryFee: "₹100",
-    perks: ["Certificates", "Best Speaker Award"],
     about: "Leadership and governance simulation — debate policies and propose solutions.",
-    rounds: [
-      { name: "1st Round Screening", detail: "On day screening" },
-      { name: "Final Debate", detail: "On day debate" }
-    ],
-    rulebookUrl: "https://example.com/yuva-rulebook.pdf",
+    rulebookUrl: "/rulebooks/Youth Parliament_Rulebook.pdf",
     contact: [
       { name: "Coordinator 1: Ankit Chandrakar", phone: "+91-8308877784" },
       { name: "Coordinator 2: Dayal Ghoble", phone: "+91-9545274943" },
@@ -207,13 +170,8 @@ const EVENT_DATA = {
     registerUrl: "https://forms.gle/U4j88Td6TJcM6Gyu9",
     teamSize: "Individual",
     entryFee: "₹100",
-    perks: ["Certificates"],
     about: "Demonstrate your communication and critical thinking skills in a structured group discussion on contemporary topics.",
-    rounds: [
-      { name: "Prelims", detail: "Topic presentation" },
-      { name: "Final", detail: "Group discussion" }
-    ],
-    rulebookUrl: "https://example.com/group-discussion-rulebook.pdf",
+    rulebookUrl: "/rulebooks/Group discussion_RULEBOOK.pdf",
     contact: [
       { name: "Coordinator 1: Raj Chaudhari", phone: "+91-9145552333" },
       { name: "Coordinator 2: Chiraye Patle", phone: "+91-8793801526" },
@@ -228,10 +186,8 @@ const EVENT_DATA = {
     registerUrl: "https://forms.gle/LPGtSnCmAaDgwGYD9",
     teamSize: "Solo/Duo/Group",
     entryFee: "₹100",
-    perks: ["Certificates", "Stage Photos"],
     about: "A free stage to showcase any talent — music, dance, poetry, and more.",
-    rounds: [{ name: "Performance", detail: "Live showcase" }],
-    rulebookUrl: "https://example.com/open-stage-rulebook.pdf",
+    rulebookUrl: "/rulebooks/Open Stage_rulebook.pdf",
     contact: [
       { name: "Coordinator 1: Siddeshawar Madne", phone: "+91-8767492833" },
       { name: "Coordinator 2: Prachi Nitnaware", phone: "+91-7841886750" }
@@ -282,19 +238,6 @@ export default function EventDetails({ route, onNavigate }) {
               <InfoCard label="Entry Fee (per person)" value={data.entryFee} />
               {data.prizePool !== "—" && <InfoCard label="Prize Pool" value={data.prizePool} />}
             </div>
-
-            {/* Rounds */}
-            <section className="mb-10">
-              <h2 className="text-2xl font-bold mb-3">Rounds</h2>
-              <div className="space-y-3">
-                {data.rounds.map((r, i) => (
-                  <div key={i} className="p-4 rounded-lg bg-white/10 border border-white/10">
-                    <div className="font-semibold">{r.name}</div>
-                    <div className="text-white/80 text-sm">{r.detail}</div>
-                  </div>
-                ))}
-              </div>
-            </section>
 
             {/* Rulebook */}
             <section className="mb-10">

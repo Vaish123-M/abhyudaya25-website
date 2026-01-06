@@ -49,7 +49,7 @@ export default function MainScreen({ onNavigate }) {
       className="flex flex-col items-center"
       initial={{ opacity: 0, scale: 0.8 }}
       animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 0.15 }}
     >
       <div className="bg-white/20 backdrop-blur-md rounded-lg px-3 py-2 sm:px-6 sm:py-4 md:px-7 md:py-4 min-w-[60px] sm:min-w-[90px] md:min-w-[100px] border-2 border-white">
         <div className="text-2xl sm:text-4xl md:text-6xl font-black text-white font-mono">
@@ -70,7 +70,7 @@ export default function MainScreen({ onNavigate }) {
         style={{ backgroundImage: `url(${coloredImg})`, backgroundSize: "100% 100%", backgroundPosition: "center", backgroundRepeat: "no-repeat" }}
         initial={{ opacity: 0, scale: 1.03 }}
         animate={{ opacity: reveal ? 1 : 0, scale: reveal ? 1 : 1.03 }}
-        transition={{ duration: 1.5, ease: "easeOut" }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
       />
 
       {/* Top Bar - Navigation and Countdown on Same Line */}
@@ -79,7 +79,7 @@ export default function MainScreen({ onNavigate }) {
           className="absolute top-0 left-0 right-0 z-50 bg-gradient-to-b from-black/90 via-black/70 to-transparent px-4 sm:px-6 md:px-8 pt-4 pb-3 sm:pt-5 sm:pb-4"
           initial={{ y: -100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
+          transition={{ duration: 0.3, ease: "easeOut" }}
         >
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 max-w-full mt-2 sm:mt-3 md:mt-4">
           {/* Navigation Links - Left Side */}
@@ -94,10 +94,10 @@ export default function MainScreen({ onNavigate }) {
                   if (item === 'ABOUT US') onNavigate('about');
                   if (item === 'CONTACT') onNavigate('contact');
                 }}
-                className="text-white font-black hover:text-[#fbbf24] transition-colors duration-300 text-xs sm:text-sm md:text-lg lg:text-2xl uppercase tracking-wider cursor-pointer"
+                className="text-white font-black hover:text-[#fbbf24] transition-colors duration-150 text-xs sm:text-sm md:text-lg lg:text-2xl uppercase tracking-wider cursor-pointer"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 + index * 0.1, duration: 0.5 }}
+                transition={{ delay: 0.1 + index * 0.05, duration: 0.25 }}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -111,7 +111,7 @@ export default function MainScreen({ onNavigate }) {
             className="flex gap-2 sm:gap-3 md:gap-4 lg:gap-6 items-center flex-wrap justify-center lg:justify-end"
             initial={{ opacity: 0, x: 100 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.8, duration: 0.6 }}
+            transition={{ delay: 0.3, duration: 0.3 }}
           >
             <CountdownBox value={timeLeft.days} label="Days" />
             <div className="text-white text-xl sm:text-2xl md:text-3xl lg:text-5xl font-black">:</div>
@@ -129,7 +129,7 @@ export default function MainScreen({ onNavigate }) {
           className="absolute bottom-16 right-4 sm:bottom-20 sm:right-8 md:bottom-24 md:right-12 z-40"
           initial={{ opacity: 0, scale: 0.8, y: 100 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
-          transition={{ delay: 1.2, duration: 0.6, type: "spring" }}
+          transition={{ delay: 0.4, duration: 0.3, type: "spring" }}
         >
         <motion.button
           onClick={() => onNavigate('events')}
@@ -150,7 +150,7 @@ export default function MainScreen({ onNavigate }) {
           />
           
           {/* Glow effect on hover */}
-          <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-red-500/0 via-red-400/0 to-red-500/0 group-hover:from-red-500/30 group-hover:via-red-400/40 group-hover:to-red-500/30 transition-all duration-300 blur-md" />
+          <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-red-500/0 via-red-400/0 to-red-500/0 group-hover:from-red-500/30 group-hover:via-red-400/40 group-hover:to-red-500/30 transition-all duration-150 blur-md" />
           
           {/* Text with shadow */}
           <span className="relative text-white drop-shadow-lg font-black text-2xl sm:text-3xl" style={{ textShadow: '3px 3px 6px rgba(0,0,0,0.8), 1px 1px 2px rgba(0,0,0,0.5)' }}>
@@ -161,7 +161,7 @@ export default function MainScreen({ onNavigate }) {
           <motion.div
             className="absolute inset-0 rounded-lg bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-20"
             animate={{ x: ['-100%', '100%'] }}
-            transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+            transition={{ duration: 1.5, repeat: Infinity, ease: "linear" }}
           />
         </motion.button>
         </motion.div>
@@ -174,7 +174,7 @@ export default function MainScreen({ onNavigate }) {
           style={{ transform: "translateY(-120px)" }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.9, duration: 0.7, ease: "easeOut" }}
+          transition={{ delay: 0.4, duration: 0.35, ease: "easeOut" }}
         >
           <motion.span
             className="text-white font-black cursor-pointer"
@@ -188,12 +188,12 @@ export default function MainScreen({ onNavigate }) {
             }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.9, ease: "easeOut" }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
             whileHover={{
               scale: 1.08,
               y: -2,
               rotate: 0.5,
-              transition: { duration: 0.3, ease: "easeOut" }
+              transition: { duration: 0.15, ease: "easeOut" }
             }}
           >
             ABHYUDAYA ’25

@@ -72,7 +72,7 @@ export default function AboutUs({ onNavigate }) {
         className="absolute top-0 left-0 right-0 z-50 bg-gradient-to-b from-black/90 via-black/70 to-transparent px-4 sm:px-6 md:px-8 pt-4 pb-3 sm:pt-5 sm:pb-4"
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
+        transition={{ duration: 0.3, ease: "easeOut" }}
       >
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 max-w-full mt-12 sm:mt-14 md:mt-16">
           <div className="flex flex-wrap gap-3 sm:gap-5 md:gap-7 lg:gap-10 items-center justify-center lg:justify-start">
@@ -86,10 +86,10 @@ export default function AboutUs({ onNavigate }) {
                   if (item === 'ABOUT US') onNavigate?.('about');
                   if (item === 'CONTACT') onNavigate?.('contact');
                 }}
-                className="text-white font-black hover:text-[#f97316] transition-colors duration-300 text-base sm:text-lg md:text-2xl uppercase tracking-wider cursor-pointer"
+                className="text-white font-black hover:text-[#f97316] transition-colors duration-150 text-base sm:text-lg md:text-2xl uppercase tracking-wider cursor-pointer"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 + index * 0.1, duration: 0.5 }}
+                transition={{ delay: 0.1 + index * 0.1, duration: 0.5 }}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -107,7 +107,7 @@ export default function AboutUs({ onNavigate }) {
           initial="hidden"
           animate="visible"
           variants={fadeUp}
-          transition={{ duration: 0.7, ease: "easeOut" }}
+          transition={{ duration: 0.35, ease: "easeOut" }}
           className="text-center uppercase tracking-widest drop-shadow-2xl overflow-hidden"
         style={{
           fontFamily: 'Poppins, system-ui, sans-serif',
@@ -142,7 +142,7 @@ export default function AboutUs({ onNavigate }) {
       <motion.div
         initial={{ opacity: 0, width: 0 }}
         animate={{ opacity: 1, width: 160 }}
-        transition={{ delay: 0.2, duration: 0.6 }}
+        transition={{ delay: 0.1, duration: 0.3 }}
         className="relative mx-auto mt-6 h-1 rounded-full z-10 shadow-lg"
         style={{ background: 'linear-gradient(90deg, #f97316, #22c55e, #2563eb)', boxShadow: '0 0 30px rgba(249,115,22,0.6), 0 0 50px rgba(34,197,94,0.35)' }}
       >
@@ -238,7 +238,7 @@ export default function AboutUs({ onNavigate }) {
           viewport={{ once: true, margin: "-80px" }}
           variants={{
             hidden: { opacity: 0, y: 28 },
-            visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut", staggerChildren: 0.08 } }
+            visible: { opacity: 1, y: 0, transition: { duration: 0.35, ease: "easeOut", staggerChildren: 0.08 } }
           }}
         >
           {[{
@@ -285,7 +285,7 @@ export default function AboutUs({ onNavigate }) {
           viewport={{ once: true, margin: "-60px" }}
           variants={{
             hidden: { opacity: 0, y: 28 },
-            visible: { opacity: 1, y: 0, transition: { duration: 0.75, ease: "easeOut" } }
+            visible: { opacity: 1, y: 0, transition: { duration: 0.355, ease: "easeOut" } }
           }}
         >
           <div className="flex items-center gap-3 justify-center">
@@ -331,7 +331,7 @@ export default function AboutUs({ onNavigate }) {
         whileInView="visible"
         viewport={{ once: true, margin: "-80px" }}
         variants={fadeUp}
-        transition={{ delay: 0.1, duration: 0.7 }}
+        transition={{ delay: 0.1, duration: 0.35 }}
         className="relative z-10 text-center py-16"
       >
           <motion.button
@@ -348,7 +348,7 @@ export default function AboutUs({ onNavigate }) {
                 boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.2), 0 8px 16px rgba(0,0,0,0.6)'
               }}
             />
-            <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-red-500/0 via-red-400/0 to-red-500/0 group-hover:from-red-500/30 group-hover:via-red-400/40 group-hover:to-red-500/30 transition-all duration-300 blur-md" />
+            <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-red-500/0 via-red-400/0 to-red-500/0 group-hover:from-red-500/30 group-hover:via-red-400/40 group-hover:to-red-500/30 transition-all duration-150 blur-md" />
             <span className="relative text-white drop-shadow-lg font-black" style={{ textShadow: '3px 3px 6px rgba(0,0,0,0.8), 1px 1px 2px rgba(0,0,0,0.5)' }}>
               Explore Events
             </span>

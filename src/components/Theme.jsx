@@ -114,8 +114,8 @@ export default function Theme({ onNavigate }) {
         return (
           <svg viewBox="0 0 300 200" className="w-full h-full">
             {/* Hands joining in circle */}
-            <circle cx="150" cy="100" r="50" fill={`rgba(251, 191, 36, ${hoveredCard === 3 ? 0.3 : 0.1})`} className="transition-all duration-500"/>
-            <circle cx="150" cy="100" r="30" fill={`rgba(251, 191, 36, ${hoveredCard === 3 ? 0.5 : 0.2})`} className="transition-all duration-500"/>
+            <circle cx="150" cy="100" r="50" fill={`rgba(251, 191, 36, ${hoveredCard === 3 ? 0.3 : 0.1})`} className="transition-all duration-250"/>
+            <circle cx="150" cy="100" r="30" fill={`rgba(251, 191, 36, ${hoveredCard === 3 ? 0.5 : 0.2})`} className="transition-all duration-250"/>
             {/* Hands around circle */}
             {[0, 72, 144, 216, 288].map((angle, i) => {
               const rad = (angle * Math.PI) / 180;
@@ -161,7 +161,7 @@ export default function Theme({ onNavigate }) {
                 strokeWidth="2"
                 initial={{ pathLength: 0 }}
                 animate={{ pathLength: 1 }}
-                transition={{ duration: 1, delay: i * 0.1 }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
               />
             ))}
             {/* Made in India stamp */}
@@ -202,7 +202,7 @@ export default function Theme({ onNavigate }) {
         className="absolute top-0 left-0 right-0 z-50 bg-gradient-to-b from-black/90 via-black/70 to-transparent px-4 sm:px-6 md:px-8 pt-4 pb-3 sm:pt-5 sm:pb-4"
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
+        transition={{ duration: 0.3, ease: "easeOut" }}
       >
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 max-w-full mt-12 sm:mt-14 md:mt-16">
           <div className="flex flex-wrap gap-3 sm:gap-5 md:gap-7 lg:gap-10 items-center justify-center lg:justify-start">
@@ -216,10 +216,10 @@ export default function Theme({ onNavigate }) {
                   if (item === 'ABOUT US') onNavigate('about');
                   if (item === 'CONTACT') onNavigate('contact');
                 }}
-                className="text-white font-black hover:text-[#f97316] transition-colors duration-300 text-base sm:text-lg md:text-2xl uppercase tracking-wider cursor-pointer"
+                className="text-white font-black hover:text-[#f97316] transition-colors duration-150 text-base sm:text-lg md:text-2xl uppercase tracking-wider cursor-pointer"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 + index * 0.1, duration: 0.5 }}
+                transition={{ delay: 0.1 + index * 0.1, duration: 0.5 }}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -272,7 +272,7 @@ export default function Theme({ onNavigate }) {
               fill={`rgba(100, 116, 139, ${0.2 + colorProgress * 0.6})`}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 0.2 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
             />
             
             {/* Trees */}
@@ -283,7 +283,7 @@ export default function Theme({ onNavigate }) {
                   fill={`rgba(34, 197, 94, ${0.2 + colorProgress * 0.8})`}
                   initial={{ scaleY: 0 }}
                   animate={{ scaleY: 1 }}
-                  transition={{ duration: 0.8, delay: 0.5 + i * 0.1 }}
+                  transition={{ duration: 0.4, delay: 0.2 + i * 0.1 }}
                   style={{ transformOrigin: `${x}px 550px` }}
                 />
                 <motion.path
@@ -291,7 +291,7 @@ export default function Theme({ onNavigate }) {
                   fill={`rgba(74, 222, 128, ${0.2 + colorProgress * 0.8})`}
                   initial={{ scaleY: 0 }}
                   animate={{ scaleY: 1 }}
-                  transition={{ duration: 0.8, delay: 0.6 + i * 0.1 }}
+                  transition={{ duration: 0.4, delay: 0.6 + i * 0.1 }}
                   style={{ transformOrigin: `${x}px 540px` }}
                 />
                 <rect x={x - 5} y="550" width="10" height="30" fill={`rgba(120, 53, 15, ${0.4 + colorProgress * 0.6})`}/>
@@ -309,7 +309,7 @@ export default function Theme({ onNavigate }) {
                   "M0 600 Q200 580, 400 600 T800 600 T1200 600 L1200 800 L0 800 Z",
                 ]
               }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
             />
             
             {/* Ground/Grass */}
@@ -322,7 +322,7 @@ export default function Theme({ onNavigate }) {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.5 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
           >
             <motion.h1
               className="mb-6 uppercase tracking-widest drop-shadow-2xl overflow-hidden whitespace-nowrap mx-auto -ml-6 sm:-ml-12 md:-ml-16 lg:-ml-20"
@@ -361,7 +361,7 @@ export default function Theme({ onNavigate }) {
               }}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 0.8 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
             >
               पञ्च परिवर्तन
             </motion.p>
@@ -370,7 +370,7 @@ export default function Theme({ onNavigate }) {
               className="text-base sm:text-lg md:text-xl lg:text-2xl font-poppins font-bold drop-shadow-lg uppercase tracking-widest"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 1 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
               style={{ textShadow: '0 0 25px rgba(37, 99, 235, 0.35)' }}
             >
               {"Themes that Inspire a Better Tomorrow".split(" ").map((word, idx) => (
@@ -378,7 +378,7 @@ export default function Theme({ onNavigate }) {
                   key={idx}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: [20, -3, 0], color: ['#f97316', '#22c55e', '#2563eb', '#22c55e'] }}
-                  transition={{ duration: 0.6, delay: 0.9 + idx * 0.08, ease: 'easeOut' }}
+                  transition={{ duration: 0.3, delay: 0.9 + idx * 0.08, ease: 'easeOut' }}
                   style={{ display: 'inline-block', marginRight: '0.35em' }}
                 >
                   {word}
@@ -415,7 +415,7 @@ export default function Theme({ onNavigate }) {
               initial={{ opacity: 0, y: 60 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.8, delay: index * 0.1 }}
+              transition={{ duration: 0.4, delay: index * 0.1 }}
               onMouseEnter={() => setHoveredCard(card.id)}
               onMouseLeave={() => setHoveredCard(null)}
             >
@@ -463,7 +463,7 @@ export default function Theme({ onNavigate }) {
                             y: [0, -10, 0],
                             rotate: [0, 10, -10, 0]
                           } : {}}
-                          transition={{ duration: 0.6, delay: i * 0.1 }}
+                          transition={{ duration: 0.3, delay: i * 0.1 }}
                         >
                           {icon}
                         </motion.div>
@@ -504,7 +504,7 @@ export default function Theme({ onNavigate }) {
                       initial={{ width: "0%" }}
                       whileInView={{ width: hoveredCard === card.id ? "100%" : "60%" }}
                       viewport={{ once: true }}
-                      transition={{ duration: 0.8, delay: 0.3 }}
+                      transition={{ duration: 0.4, delay: 0.3 }}
                     />
                   </div>
                 </div>
@@ -553,7 +553,7 @@ export default function Theme({ onNavigate }) {
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.3, delay: 0.2 }}
           >
             Join us in embracing these five pillars of change for a brighter tomorrow
           </motion.p>
@@ -565,7 +565,7 @@ export default function Theme({ onNavigate }) {
           >
             <button
               onClick={() => onNavigate('events')}
-              className="px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 text-base sm:text-lg"
+              className="px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-150 text-base sm:text-lg"
             >
               Explore Our Events
             </button>

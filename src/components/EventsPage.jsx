@@ -168,7 +168,7 @@ export default function EventsPage({ onNavigate }) {
       y: 0,
       scale: 1,
       transition: {
-        duration: 0.6,
+        duration: 0.3,
         ease: "easeOut"
       }
     }
@@ -209,7 +209,7 @@ export default function EventsPage({ onNavigate }) {
         className="text-center pt-32 sm:pt-36 md:pt-40 pb-12 sm:pb-16 md:pb-20 relative z-10 px-4 sm:px-6 md:px-8"
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
+        transition={{ duration: 0.4, ease: "easeOut" }}
       >
         <h1 className="mb-6 uppercase tracking-widest drop-shadow-2xl overflow-hidden"
           style={{
@@ -243,7 +243,7 @@ export default function EventsPage({ onNavigate }) {
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.8, duration: 0.6 }}
+          transition={{ delay: 0.3, duration: 0.6 }}
         >
           <p className="text-sm sm:text-lg md:text-2xl font-poppins font-bold drop-shadow-lg uppercase tracking-wide sm:tracking-widest">
             {"Discover 12 Amazing Competitions & Experiences".split(" ").map((word, idx) => (
@@ -256,8 +256,8 @@ export default function EventsPage({ onNavigate }) {
                   color: ["#f97316", "#22c55e", "#2563eb", "#22c55e"]
                 }}
                 transition={{ 
-                  duration: 0.6,
-                  delay: 0.9 + idx * 0.08,
+                  duration: 0.3,
+                  delay: 0.3 + idx * 0.08,
                   ease: "easeOut"
                 }}
                 style={{ 
@@ -275,7 +275,7 @@ export default function EventsPage({ onNavigate }) {
           className="w-32 h-1.5 mx-auto mt-6 rounded-full shadow-lg relative overflow-hidden"
           initial={{ width: 0, opacity: 0 }}
           animate={{ width: 128, opacity: 1 }}
-          transition={{ delay: 1.6, duration: 0.8, ease: "easeOut" }}
+          transition={{ delay: 0.5, duration: 0.4, ease: "easeOut" }}
           style={{ 
             background: 'linear-gradient(90deg, #f97316, #22c55e, #2563eb)',
             boxShadow: "0 0 30px rgba(249, 115, 22, 0.8), 0 0 50px rgba(34, 197, 94, 0.45)" 
@@ -381,7 +381,7 @@ export default function EventsPage({ onNavigate }) {
                 <motion.div 
                   className="text-5xl sm:text-6xl mb-3 sm:mb-4 flex justify-center"
                   animate={hoveredCard === event.id ? { scale: 1.25, rotate: [0, 8, -8, 0], filter: "drop-shadow(0 0 20px rgba(255, 255, 255, 0.7))" } : { scale: 1, rotate: 0, filter: "drop-shadow(0 0 10px rgba(255, 255, 255, 0.4))" }}
-                  transition={{ duration: 0.35, ease: "easeOut" }}
+                  transition={{ duration: 0.2, ease: "easeOut" }}
                 >
                   {event.icon}
                 </motion.div>
@@ -398,7 +398,7 @@ export default function EventsPage({ onNavigate }) {
                     style={{ fontFamily: 'Poppins, system-ui, sans-serif', textShadow: '0 1px 0 rgba(255,255,255,0.5)' }}
                     initial={{ opacity: 0.85 }}
                     animate={hoveredCard === event.id ? { opacity: 1 } : { opacity: 0.85 }}
-                    transition={{ duration: 0.35, ease: "easeInOut" }}
+                    transition={{ duration: 0.2, ease: "easeInOut" }}
                   >
                     {event.description}
                   </motion.p>
@@ -449,7 +449,7 @@ export default function EventsPage({ onNavigate }) {
                   initial={{ rotateY: 90, opacity: 0 }}
                   animate={{ rotateY: 0, opacity: 1 }}
                   exit={{ rotateY: -90, opacity: 0 }}
-                  transition={{ duration: 0.35, ease: 'easeOut' }}
+                  transition={{ duration: 0.2, ease: 'easeOut' }}
                   style={{ transformOrigin: 'center' }}
                   onClick={() => setFlippedCard(null)}
                 >
@@ -483,7 +483,7 @@ export default function EventsPage({ onNavigate }) {
         className="absolute top-0 left-0 right-0 z-50 bg-gradient-to-b from-black/90 via-black/70 to-transparent px-4 sm:px-6 md:px-8 pt-4 pb-3 sm:pt-5 sm:pb-4"
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
+        transition={{ duration: 0.3, ease: "easeOut" }}
       >
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 max-w-full mt-12 sm:mt-14 md:mt-16">
           {/* Navigation Links - Left Side */}
@@ -498,7 +498,7 @@ export default function EventsPage({ onNavigate }) {
                   if (item === 'ABOUT US') onNavigate('about');
                   if (item === 'CONTACT') onNavigate('contact');
                 }}
-                className="text-white font-black hover:text-[#f97316] transition-colors duration-300 text-base sm:text-lg md:text-2xl uppercase tracking-wider cursor-pointer"
+                className="text-white font-black hover:text-[#f97316] transition-colors duration-150 text-base sm:text-lg md:text-2xl uppercase tracking-wider cursor-pointer"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 + index * 0.1, duration: 0.5 }}
