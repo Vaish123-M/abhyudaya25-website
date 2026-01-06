@@ -156,7 +156,7 @@ export default function EventsPage({ onNavigate }) {
       opacity: 1,
       transition: {
         staggerChildren: 0.1,
-        delayChildren: 0.2
+        delayChildren: 0
       }
     }
   };
@@ -209,7 +209,7 @@ export default function EventsPage({ onNavigate }) {
         className="text-center pt-32 sm:pt-36 md:pt-40 pb-12 sm:pb-16 md:pb-20 relative z-10 px-4 sm:px-6 md:px-8"
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.4, ease: "easeOut" }}
+        transition={{ duration: 0.2, ease: "easeOut" }}
       >
         <h1 className="mb-6 uppercase tracking-widest drop-shadow-2xl overflow-hidden"
           style={{
@@ -243,7 +243,7 @@ export default function EventsPage({ onNavigate }) {
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.3, duration: 0.6 }}
+          transition={{ delay: 0, duration: 0.6 }}
         >
           <p className="text-sm sm:text-lg md:text-2xl font-poppins font-bold drop-shadow-lg uppercase tracking-wide sm:tracking-widest">
             {"Discover 12 Amazing Competitions & Experiences".split(" ").map((word, idx) => (
@@ -257,7 +257,7 @@ export default function EventsPage({ onNavigate }) {
                 }}
                 transition={{ 
                   duration: 0.3,
-                  delay: 0.3 + idx * 0.08,
+                  delay: 0 + idx * 0.08,
                   ease: "easeOut"
                 }}
                 style={{ 
@@ -275,7 +275,7 @@ export default function EventsPage({ onNavigate }) {
           className="w-32 h-1.5 mx-auto mt-6 rounded-full shadow-lg relative overflow-hidden"
           initial={{ width: 0, opacity: 0 }}
           animate={{ width: 128, opacity: 1 }}
-          transition={{ delay: 0.5, duration: 0.4, ease: "easeOut" }}
+          transition={{ delay: 0, duration: 0.4, ease: "easeOut" }}
           style={{ 
             background: 'linear-gradient(90deg, #f97316, #22c55e, #2563eb)',
             boxShadow: "0 0 30px rgba(249, 115, 22, 0.8), 0 0 50px rgba(34, 197, 94, 0.45)" 
@@ -501,7 +501,7 @@ export default function EventsPage({ onNavigate }) {
                 className="text-white font-black hover:text-[#f97316] transition-colors duration-150 text-base sm:text-lg md:text-2xl uppercase tracking-wider cursor-pointer"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 + index * 0.1, duration: 0.5 }}
+                transition={{ delay: 0 + index * 0.1, duration: 0.5 }}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
               >

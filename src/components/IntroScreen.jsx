@@ -8,7 +8,7 @@ export default function IntroScreen({ onEnter }) {
   const [startColoring, setStartColoring] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => setLoaded(true), 300);
+    setTimeout(() => setLoaded(true), 100);
   }, []);
 
   const handleEnterClick = () => {
@@ -17,7 +17,7 @@ export default function IntroScreen({ onEnter }) {
     // Navigate to main screen after animation completes
     setTimeout(() => {
       onEnter();
-    }, 500);
+    }, 200);
   };
 
   return (

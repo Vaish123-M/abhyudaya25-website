@@ -13,8 +13,8 @@ export default function MainScreen({ onNavigate }) {
   });
 
   useEffect(() => {
-    const revealTimer = setTimeout(() => setReveal(true), 120);
-    const uiTimer = setTimeout(() => setShowUi(true), 900);
+    const revealTimer = setTimeout(() => setReveal(true), 50);
+    const uiTimer = setTimeout(() => setShowUi(true), 200);
     return () => {
       clearTimeout(revealTimer);
       clearTimeout(uiTimer);

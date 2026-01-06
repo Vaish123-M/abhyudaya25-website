@@ -51,7 +51,10 @@ const EVENT_DATA = {
     entryFee: "₹100",
     about: "Experts debate contemporary topics—hear multiple sides and ask questions.",
     rulebookUrl: "/rulebooks/Panel Discussion rulebook.pdf",
-    contact: [{ name: "Coordinator", phone: "+91-9888888888" }],
+    contact: [
+      { name: "Coordinator 1: Rahul Trivedi", phone: "+91-8668997469" },
+      { name: "Coordinator 2: Prajwala Dhurve", phone: "+91-8668997469" }
+    ],
     prizePool: "—",
     venue: "On Ground"
   },
