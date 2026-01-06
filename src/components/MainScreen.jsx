@@ -181,7 +181,7 @@ export default function MainScreen({ onNavigate }) {
             style={{
               fontFamily: "Poppins, system-ui, sans-serif",
               letterSpacing: "0.12em",
-              fontSize: "clamp(20px, 4.5vw, 52px)",
+              fontSize: "clamp(26px, 5.5vw, 65px)",
               textShadow: "0 6px 18px rgba(0,0,0,0.55), 0 0 18px rgba(92,45,10,0.6)",
               color: "#8b4513",
               display: "inline-block"
