@@ -111,7 +111,7 @@ const EVENT_DATA = {
     about: "Solve clues, race through campus, and find the treasure!",
     rulebookUrl: "/rulebooks/Treasure Hunt_rulebook.pdf",
     contact: [
-      { name: "Coordinator 1: Devansh Burhade", phone: "+91-9673903083" },
+      { name: "Coordinator 1: Devansh Burhade", phone: "+91-9673903008" },
       { name: "Coordinator 2: Charvi Khandar", phone: "+91-7385395360" }
     ],
     prizePool: "₹9,000",
