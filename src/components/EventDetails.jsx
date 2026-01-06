@@ -50,7 +50,7 @@ const EVENT_DATA = {
     teamSize: "Audience",
     entryFee: "₹100",
     about: "Experts debate contemporary topics—hear multiple sides and ask questions.",
-    rulebookUrl: "/rulebooks/Pragyan Lecture Series_Rulebook.pdf",
+    rulebookUrl: "/rulebooks/Panel Discussion rulebook.pdf",
     contact: [{ name: "Coordinator", phone: "+91-9888888888" }],
     prizePool: "—",
     venue: "On Ground"
